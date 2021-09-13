@@ -24,6 +24,9 @@ const theme = createTheme({
             error: {
                 main: red.A400,
             },
+            common: {
+                main: 'rgba(0, 0, 0, 1)',
+            }
         },
     typography: {
         fontFamily: [
