@@ -1,12 +1,13 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
+import {Box} from "@mui/material";
+import HeroSection from "../src/components/home/HeroSection";
 // import {AppBar, Box, Stack, Toolbar} from "@mui/material";
 
 export default function Index() {
 
     return (
-        <Container maxWidth="xl">
-           Body
-        </Container>
+        <Box>
+           <HeroSection/>
+        </Box>
     );
 }

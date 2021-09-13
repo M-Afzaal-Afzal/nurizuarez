@@ -14,7 +14,9 @@
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-rating": "^2.0.5",
+    "typewriter-effect": "^2.18.0"
   },
   "scripts": {
     "dev": "next",

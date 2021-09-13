@@ -39,6 +39,14 @@ const theme = createTheme({
             fontFamily: '"Open Sans"',
             fontSize: "1rem",
             // lineHeight: '77px',
+        },
+        body1: {
+            fontFamily: '"Open Sans"',
+        },
+        h1:{
+            fontFamily: '"Roboto Slab"',
+            fontSize: '66px',
+            color: 'rgba(0, 0, 0, 1)',
         }
     },
     });

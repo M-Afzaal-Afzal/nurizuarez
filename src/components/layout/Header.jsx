@@ -29,19 +29,19 @@ const Header = () => {
                             justifyContent: 'center',
                             alignItems: 'center',
                         }}>
-                            <Image src={'/logo.webp'}
+                            <Image src={'/blackBackground.svg'}
                                 // layout={'intrinsic'}
-                                   width={40}
-                                   height={40}
+                                   width={167}
+                                   height={45}
                                    priority={true}
                             />
-                            <Box sx={{width: '8px'}}/>
-                            <Image src={'/logoTextDark.svg'}
-                                // layout={'intrinsic'}
-                                   width={98.93}
-                                   height={16.35}
-                                   priority={true}
-                            />
+                            {/*<Box sx={{width: '8px'}}/>*/}
+                            {/*<Image src={'/logoTextDark.svg'}*/}
+                            {/*    // layout={'intrinsic'}*/}
+                            {/*       width={98.93}*/}
+                            {/*       height={16.35}*/}
+                            {/*       priority={true}*/}
+                            {/*/>*/}
 
                         </Box>
                         <ButtonPrimaryText>
