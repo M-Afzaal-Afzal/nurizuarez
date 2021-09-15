@@ -12,7 +12,7 @@ import StarIcon from '@mui/icons-material/Star';
 const HeroSection = () => {
     return (
         <Container sx={{
-            py: '3rem',
+            pt: '3rem',
         }} maxWidth={'xl'}
         >
 

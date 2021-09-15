@@ -1,9 +1,10 @@
 import React from 'react';
-import {Box, Container, Divider, IconButton, Stack, Typography} from "@mui/material";
+import {Box, Container, Divider, IconButton, Stack} from "@mui/material";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import ButtonPrimaryText from "../common/buttons/ButtonPrimaryText";
 
 const Footer = () => {
     return (
@@ -88,16 +89,18 @@ const Footer = () => {
                                 my: 'auto',
                             }} flexItem light variant="middle"/>
                         </Box>
-                        <Typography sx={{
+                        <ButtonPrimaryText sx={{
                             fontSize: '15px',
-                        }} variant={'body1'}>
+                            color: '#fff',
+                        }} >
                             Terms
-                        </Typography>
-                        <Typography sx={{
+                        </ButtonPrimaryText>
+                        <ButtonPrimaryText sx={{
                             fontSize: '15px',
-                        }} variant={'body1'}>
+                            color: '#fff',
+                        }} >
                             Privacy
-                        </Typography>
+                        </ButtonPrimaryText>
                     </Stack>
 
                 </Box>

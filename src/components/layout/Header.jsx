@@ -29,7 +29,7 @@ const Header = () => {
                             justifyContent: 'center',
                             alignItems: 'center',
                         }}>
-                            <Image src={'/blackBackground.svg'}
+                            <Image src={'/whiteBackground.svg'}
                                 // layout={'intrinsic'}
                                    width={167}
                                    height={45}
