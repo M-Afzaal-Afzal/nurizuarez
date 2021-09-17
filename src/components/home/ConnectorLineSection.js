@@ -8,14 +8,18 @@ const ConnectorLineSection = () => {
             <Box display={'flex'}
                 justifyContent={'flex-end'}
                 sx={{
-                    marginLeft: '35%',
+                    // marginLeft: '35%',
+                    '& img' : {
+                        width: '90%',
+                        height: 'auto',
+                    }
                 }}
             >
                 <Image
                     src={'/home/ConnectorLine.svg'}
-                    height={80.81}
-                    width={470.5}
-                    layout={'intrinsic'}
+                    height={90.81}
+                    width={700.5}
+                    // layout={'intrinsic'}
                 />
             </Box>
             <Box/>

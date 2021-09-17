@@ -5,9 +5,7 @@ import {Box, IconButton, Typography} from "@mui/material";
 import Image from "next/image";
 import PrimaryButtonContained from "../common/buttons/PrimaryButtonContained";
 import PlayCircleOutlineOutlinedIcon from '@mui/icons-material/PlayCircleOutlineOutlined';
-import Rating from 'react-rating';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
-import StarIcon from '@mui/icons-material/Star';
+import Testimonial from "../common/Testimonial";
 
 const HeroSection = () => {
     return (
@@ -77,54 +75,9 @@ const HeroSection = () => {
                         No credit card needed. 2 mins signup.
                     </Typography>
 
-                    <Box sx={{
-                        alignItems: 'center',
-                        gridGap: '1rem',
-                    }} mt={'2rem'} display={'grid'} gridTemplateColumns={'auto 1fr'}>
-                        <Box sx={{
-                            '& img': {
-                                borderRadius: '10px',
-                            }
-                        }}>
-                            <Image src={'/home/profile.png'} width={50} height={50}/>
-                        </Box>
-
-                        <Box>
-                            <Typography position={'relative'} px={'1rem'}>
-                                <Box component={'span'} position={'absolute'} left={0} top={-5}>
-                                    <Image src={'/home/startingQuote.svg'} width={12} height={12}/>
-                                </Box>
-                                It is easy to get lost in all the information you’re dealing with on a day-to-day basis.
-                                This helps you stay organized and prioritize your time so that you can be a more
-                                efficient agent.
-                                <Box component={'span'} pl={'.5rem'}>
-                                    <Image src={'/home/startingQuote.svg'} width={12} height={12}/>
-                                </Box>
-                            </Typography>
-                        </Box>
-
-                    </Box>
-
-                    <Box sx={{
-                        margin: '1rem 0',
-                    }}>
-                        <Rating direction={'ltr'}
-                                emptySymbol={<StarBorderIcon sx={{
-                                    color: theme => theme.palette.primary.main,
-                                }}/>}
-                                fullSymbol={<StarIcon sx={{
-                                    color: theme => theme.palette.primary.main,
-                                }}/>}
-                                fractions={10}
-                                readonly
-                                initialRating={5}
-                        />
-
-                        <Typography variant={'body1'} fontWeight={'600'} fontSize={'12px'}>
-                            - Ian C. <br/>
-                            Keller Williams Agent
-                        </Typography>
-
+                    {/* user profile card*/}
+                    <Box mt={'2rem'}>
+                        <Testimonial/>
                     </Box>
 
 

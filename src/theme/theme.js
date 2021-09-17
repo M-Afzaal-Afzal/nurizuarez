@@ -26,7 +26,10 @@ const theme = createTheme({
             },
             common: {
                 main: 'rgba(0, 0, 0, 1)',
-            }
+            },
+            grey: {
+              main: "rgba(255, 255, 255, 1)",
+            },
         },
     typography: {
         fontFamily: [
