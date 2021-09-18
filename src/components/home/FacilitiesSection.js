@@ -18,7 +18,8 @@ const FacilitiesSection = () => {
                     clipPath: 'ellipse(80% 85% at 50% 0%)',
                     zIndex: '-1',
                 },
-                py: '5rem',
+                pt: '5rem',
+                pb: '2rem',
             }}>
 
                 <Box sx={{

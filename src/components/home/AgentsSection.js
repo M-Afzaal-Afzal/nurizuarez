@@ -18,7 +18,9 @@ const AgentsSection = () => {
                     Take it from agents who are already using RentBase
                 </Typography>
 
-                <TestimonialsSection/>
+                <Box py={'2rem'}>
+                    <TestimonialsSection/>
+                </Box>
 
             </Container>
         </Box>
