@@ -7,7 +7,9 @@ import StarIcon from "@mui/icons-material/Star";
 
 const Testimonial = () => {
     return (
-        <Box>
+        <Box sx={{
+            maxWidth:"435px"
+        }}>
 
             <Box
                 sx={{

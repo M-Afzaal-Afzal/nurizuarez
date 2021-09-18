@@ -6,6 +6,7 @@ import RentalSection from "../src/components/home/RentalSection";
 import ConnectorLineSection2 from "../src/components/home/ConnectorLineSection2";
 import AgentsSection from "../src/components/home/AgentsSection";
 import CtaBannerSection from "../src/components/home/CtaBannerSection";
+import FacilitiesSection from "../src/components/home/FacilitiesSection";
 // import {AppBar, Box, Stack, Toolbar} from "@mui/material";
 
 export default function Index() {
@@ -17,9 +18,12 @@ export default function Index() {
             <RentalSection/>
             <ConnectorLineSection2/>
             <AgentsSection/>
-            <Box py={'4rem'}>
+
+            <Box position={'relative'} zIndex={10} mt={'-43.5px'} mb={'-43.5px'}>
                 <CtaBannerSection/>
             </Box>
+
+            <FacilitiesSection/>
 
         </Box>
     );

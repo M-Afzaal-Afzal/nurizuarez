@@ -5,7 +5,7 @@ import TestimonialsSection from "./TestimonialsSection";
 
 const AgentsSection = () => {
     return (
-        <Box mt={'1rem'}>
+        <Box mt={'1rem'} pb={'4rem'}>
             <Container maxWidth={'xl'}>
                 <Typography
                     textAlign={'center'}
