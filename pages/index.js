@@ -8,6 +8,7 @@ import AgentsSection from "../src/components/home/AgentsSection";
 import CtaBannerSection from "../src/components/home/CtaBannerSection";
 import FacilitiesSection from "../src/components/home/FacilitiesSection";
 import TryRentBaseSection from "../src/components/home/TryRentBaseSection";
+import FaqSection from "../src/components/home/FaqSection";
 // import {AppBar, Box, Stack, Toolbar} from "@mui/material";
 
 export default function Index() {
@@ -27,6 +28,8 @@ export default function Index() {
             <FacilitiesSection/>
 
             <TryRentBaseSection/>
+
+            <FaqSection/>
 
         </Box>
     );

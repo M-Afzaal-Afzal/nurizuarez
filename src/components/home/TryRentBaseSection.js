@@ -2,18 +2,19 @@ import React, {useState} from 'react';
 import {Box, Typography, OutlinedInput, FormHelperText, Chip, Stack} from "@mui/material";
 import {useForm, Controller} from "react-hook-form";
 import PrimaryButtonContained from "../common/buttons/PrimaryButtonContained";
+import Image from 'next/image'
 
 const TryRentBaseSection = () => {
 
     const {control, formState: {errors}, handleSubmit} = useForm();
 
-    const [selectedRole,setSelectedRole] = useState(0);
+    const [selectedRole, setSelectedRole] = useState(0);
 
     const roleChangeHandler = (index) => {
         setSelectedRole(index);
     }
 
-    const roles = ['Agent','Manager','real-estate professional','Other']
+    const roles = ['Agent', 'Manager', 'real-estate professional', 'Other']
 
     const onSubmit = (data) => {
         console.log(data);
@@ -38,6 +39,7 @@ const TryRentBaseSection = () => {
             }}
         >
 
+            {/* Left Section*/}
             <Box>
 
                 <Typography fontWeight={'700'} fontSize={'35px'} variant={'h1'}>
@@ -59,14 +61,33 @@ const TryRentBaseSection = () => {
                     No credit card needed
                 </Typography>
 
-                <Box mt={'3rem'}>
+                <Box mt={'2.5rem'}>
                     <Typography variant={'body1'}>
                         Trusted by Agent at
                     </Typography>
                 </Box>
 
+                <Stack mt={'1rem'} direction={'row'} spacing={3}>
+                    <Box>
+                        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
+                    </Box>
+
+                    <Box>
+                        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
+                    </Box>
+
+                    <Box>
+                        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
+                    </Box>
+
+                    <Box>
+                        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
+                    </Box>
+                </Stack>
+
             </Box>
 
+            {/* Right From Section*/}
             <Box>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -147,11 +168,11 @@ const TryRentBaseSection = () => {
                         <Stack direction={'row'} spacing={2}>
 
                             {
-                                roles.map((role,index) => (
+                                roles.map((role, index) => (
                                     <Box>
                                         <Chip
                                             label={role}
-                                            variant={ (selectedRole === index) ? 'filled' : "outlined"}
+                                            variant={(selectedRole === index) ? 'filled' : "outlined"}
                                             onClick={() => {
                                                 roleChangeHandler(index)
                                             }}

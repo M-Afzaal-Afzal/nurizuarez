@@ -75,12 +75,12 @@ const FacilitiesSection = () => {
                         {/* 1st Row*/}
 
                         <Box mx={'1.5rem'} py={'1.5rem'}
-                            sx={{
-                                borderBottom: "1px solid rgba(245, 245, 245, 1)",
-                                display: 'grid',
-                                gridTemplateColumns: '1fr 1fr 1fr',
-                                gridGap: '1.5rem',
-                            }}
+                             sx={{
+                                 borderBottom: "1px solid rgba(245, 245, 245, 1)",
+                                 display: 'grid',
+                                 gridTemplateColumns: '1fr 1fr 1fr',
+                                 gridGap: '1.5rem',
+                             }}
                         >
                             <Typography sx={{
                                 display: 'flex',
@@ -154,7 +154,7 @@ const FacilitiesSection = () => {
                             </Typography>
 
                             <Typography color={'primary'} variant={'body1'}>
-                               &nbsp;
+                                &nbsp;
                             </Typography>
 
                             <Box sx={{
@@ -182,12 +182,23 @@ const FacilitiesSection = () => {
                                  gridGap: '1.5rem',
                              }}
                         >
-                            <Typography sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                            }} variant={'body1'}>
-                                Lead Scoring and Listing Matching
-                            </Typography>
+                            <Box>
+
+                                <Typography sx={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                }} variant={'body1'}>
+                                    Lead Scoring and Listing Matching
+                                </Typography>
+
+                                <Box mt={'8px'}>
+                                    <Image src={'/icons/svg/exclusive.svg'}
+                                           width={148}
+                                           height={21}
+                                    />
+                                </Box>
+
+                            </Box>
 
                             <Typography color={'primary'} variant={'body1'}>
                                 &nbsp;
@@ -208,7 +219,7 @@ const FacilitiesSection = () => {
 
                         </Box>
 
-                    {/*    5th Row*/}
+                        {/*    5th Row*/}
                         <Box mx={'1.5rem'} py={'1.5rem'}
                              sx={{
                                  borderBottom: "1px solid rgba(245, 245, 245, 1)",
@@ -217,13 +228,24 @@ const FacilitiesSection = () => {
                                  gridGap: '1.5rem',
                              }}
                         >
-                            <Typography sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                            }} variant={'body1'}>
-                                Renter Sales Identifier
-                            </Typography>
 
+                            <Box>
+
+                                <Typography sx={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                }} variant={'body1'}>
+                                    Renter Sales Identifier
+                                </Typography>
+
+                                <Box mt={'8px'}>
+                                    <Image src={'/icons/svg/exclusive.svg'}
+                                           width={148}
+                                           height={21}
+                                    />
+                                </Box>
+
+                            </Box>
                             <Typography color={'primary'} variant={'body1'}>
                                 &nbsp;
                             </Typography>
@@ -236,7 +258,6 @@ const FacilitiesSection = () => {
                             </Typography>
 
                         </Box>
-
 
 
                     </Box>
