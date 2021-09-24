@@ -112,28 +112,38 @@ const RentalSection = () => {
     return (
         <Box>
 
-            <Typography
-                maxWidth={'30rem'}
-                mx={'auto'}
-                fontSize={'35px'}
-                fontWeight={'700'}
-                textAlign={'center'}
-                variant={'h1'}
-            >
-                Start Making Your Rental Data
-                Work For You
-            </Typography>
+            {/* heading and paragraph*/}
 
-            <Typography
-                maxWidth={'40rem'}
-                mx={'auto'}
-                my={'1.5rem'}
-                textAlign={'center'}
-                variant={'body1'}
-            >
-                With your data our CRM and full automation rental operating system for realtors we’ll maximize your
-                current ROI and open new passive revenue lanes by using the same data you already own.
-            </Typography>
+            <Box sx={{
+                display: {
+                    xs: 'none',
+                    md: 'block',
+                }
+            }}>
+
+                <Typography
+                    maxWidth={'30rem'}
+                    mx={'auto'}
+                    fontSize={'35px'}
+                    fontWeight={'700'}
+                    textAlign={'center'}
+                    variant={'h1'}
+                >
+                    Start Making Your Rental Data
+                    Work For You
+                </Typography>
+
+                <Typography
+                    maxWidth={'40rem'}
+                    mx={'auto'}
+                    my={'1.5rem'}
+                    textAlign={'center'}
+                    variant={'body1'}
+                >
+                    With your data our CRM and full automation rental operating system for realtors we’ll maximize your
+                    current ROI and open new passive revenue lanes by using the same data you already own.
+                </Typography>
+            </Box>
 
             <Box sx={{borderBottom: 1, maxWidth: '40rem', mx: 'auto', borderColor: 'divider'}}>
 

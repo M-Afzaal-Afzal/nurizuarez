@@ -11,18 +11,60 @@ const HeroSection = () => {
     return (
         <Container sx={{
             pt: '3rem',
+            pb: {
+                xs: '6rem',
+                md: 0,
+            },
+            color: {
+                xs: '#fff',
+                md: '',
+            },
+            position: 'relative',
         }} maxWidth={'xl'}
+
         >
 
-            <Box display={'grid'} gridTemplateColumns={'1fr 1fr'}>
+            <Box display={'grid'} sx={{
+                display: "grid",
+                gridTemplateColumns: {
+                    xs: '1fr',
+                    md: '1fr 1fr',
+                },
+                '&:before': {
+                    xs: {
+                        content: "''",
+                        zIndex: -1,
+                        clipPath: 'ellipse(130% 95% at 50% 0%)',
+                        position: 'absolute',
+                        top: -100,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        background: 'linear-gradient(107.88deg, #3B0678 14.09%, #771EB6 65.32%)',
+
+                    },
+                    md: {
+                        content: 'none',
+                    }
+                }
+            }}>
 
                 {/* Left side*/}
-                <Box>
+                <Box sx={{
+                    textAlign: {
+                        xs: 'center',
+                        md: "left",
+                    },
+                }}>
                     <Typography sx={{
                         fontSize: '22px',
                         display: 'flex',
                         direction: 'row',
                         alignItems: 'center',
+                        justifyContent: {
+                            xs: 'center',
+                            md: 'flex-start',
+                        }
                     }} variant={'body1'}>
                         Realestate &nbsp;
                         <Typewriter
@@ -37,7 +79,14 @@ const HeroSection = () => {
                     </Typography>
 
                     <Typography
-                        sx={{py: '1rem', fontWeight: 'bold'}}
+                        sx={{
+                            py: '1rem',
+                            fontWeight: 'bold',
+                            color: {
+                                xs: '#fff',
+                                md: '',
+                            }
+                        }}
                         variant={'h1'}
                     >
                         Free more time & Close more deals
@@ -56,7 +105,12 @@ const HeroSection = () => {
                     </Typography>
 
                     {/* Header Buttons Section*/}
-                    <Box display={'flex'} alignItems={'center'} pt={'2rem'}>
+                    <Box sx={{
+                        display: {
+                            xs: 'none',
+                            md: 'flex',
+                        }
+                    }} display={'flex'} alignItems={'center'} pt={'2rem'}>
 
                         <PrimaryButtonContained>
                             Sign-Up For Free
@@ -71,12 +125,25 @@ const HeroSection = () => {
 
                     </Box>
 
-                    <Typography fontSize={'14px'} variant={'body1'}>
-                        No credit card needed. 2 mins signup.
-                    </Typography>
+                    <Box sx={{
+                        display: {
+                            xs: 'none',
+                            md: 'flex',
+                        }
+                    }}>
+                        <Typography fontSize={'14px'} variant={'body1'}
+                        >
+                            No credit card needed. 2 mins signup.
+                        </Typography>
+                    </Box>
 
                     {/* user profile card*/}
-                    <Box mt={'2rem'}>
+                    <Box sx={{
+                        display: {
+                            xs: 'none',
+                            md: 'flex',
+                        }
+                    }} mt={'2rem'}>
                         <Testimonial/>
                     </Box>
 
@@ -84,12 +151,31 @@ const HeroSection = () => {
                 </Box>
 
                 {/* Right image side*/}
-                <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
+                <Box sx={{
+                    display: {
+                        xs: 'none',
+                        md: 'flex',
+                    }
+                }} display={'flex'} justifyContent={'center'} alignItems={'center'}>
                     <Image src={'/home/heroMobiles.png'}
                            layout={'intrinsic'}
                            width={505.23}
                            height={497.45}
                            priority={true}
+                    />
+                </Box>
+
+                {/*    Tablet Image Section*/}
+                <Box sx={{
+                    display: {
+                        xs: 'flex',
+                        md: 'none',
+                    },
+                    justifyContent: 'center',
+                }}>
+                    <Image
+                        src={'/home/mocks/tablet/heroTablet.svg'} width={542}
+                        height={367}
                     />
                 </Box>
 

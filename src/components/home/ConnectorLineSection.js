@@ -4,7 +4,12 @@ import Image from 'next/image';
 
 const ConnectorLineSection = () => {
     return (
-        <Box display={'grid'} gridTemplateColumns={'1fr 1fr'}>
+        <Box sx={{
+            display: {
+                xs: 'none',
+                md: 'grid',
+            }
+        }} display={'grid'} gridTemplateColumns={'1fr 1fr'}>
             <Box display={'flex'}
                 justifyContent={'flex-end'}
                 sx={{

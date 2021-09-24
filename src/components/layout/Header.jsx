@@ -11,16 +11,21 @@ import Image from 'next/image';
 const Header = () => {
 
     return (
-        <Box>
+        <Box sx={{
+            background: 'rgba(255, 255, 255, 0.65)',
+            backdropFilter: 'blur(64px)',
+        }}>
 
             <Container maxWidth={'xl'}>
-
+                {/* Header for Desktop*/}
                 <Stack direction={'row'} sx={{
+                    display: {
+                        xs: 'none',
+                        md: 'flex'
+                    },
                     justifyContent: 'space-between',
                     alignItems: 'center',
                     height: '100px',
-                    background: 'rgba(255, 255, 255, 0.65)',
-                    backdropFilter: 'blur(64px)',
                 }}>
                     {/* Left Side of header*/}
                     <Stack direction={'row'} spacing={'10px'}>
@@ -97,6 +102,43 @@ const Header = () => {
                     </Stack>
 
                 </Stack>
+
+                {/*    Header for tablet*/}
+
+                <Stack sx={{
+                    display: {
+                        xs: 'flex',
+                        md: 'none'
+                    },
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    height: '100px',
+                }} direction={'row'}
+                >
+
+                    {/* left icon*/}
+                    <Box>
+                        <Box
+                            sx={{
+                                cursor: 'pointer',
+                            }} component={'span'}
+                        >
+                            <Image height={22} width={31} src={'/icons/svg/navIcon.svg'}/>
+                        </Box>
+                    </Box>
+
+                    <Box>
+                        <Image height={45} width={167} src={'/logos/svg/blackbackground.svg'}/>
+
+
+                    </Box>
+
+                    {/* Empty box , just for layout*/}
+                    <Box/>
+
+
+                </Stack>
+
             </Container>
 
         </Box>
