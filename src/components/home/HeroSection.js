@@ -17,7 +17,7 @@ const HeroSection = () => {
             },
             color: {
                 xs: '#fff',
-                md: '',
+                md: 'rgba(0, 0, 0, 1)',
             },
             position: 'relative',
         }} maxWidth={'xl'}
@@ -84,7 +84,7 @@ const HeroSection = () => {
                             fontWeight: 'bold',
                             color: {
                                 xs: '#fff',
-                                md: '',
+                                md: 'rgba(0, 0, 0, 1)'
                             }
                         }}
                         variant={'h1'}

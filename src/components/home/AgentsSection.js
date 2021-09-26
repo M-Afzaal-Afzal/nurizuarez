@@ -11,7 +11,12 @@ const AgentsSection = () => {
                     textAlign={'center'}
                     variant={'h1'}
                     fontWeight={'bold'}
-                    fontSize={'35px'}
+                    sx={{
+                        fontSize: {
+                            xs: '25px',
+                            md: '35px',
+                        }
+                    }}
                     lineHeight={'44px'}
                 >
                     Don’t just take it from us. <br/>

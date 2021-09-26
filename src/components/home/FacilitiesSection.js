@@ -24,25 +24,60 @@ const FacilitiesSection = () => {
 
                 <Box sx={{
                     maxWidth: '991px',
-                    mx: 'auto',
+                    background: {
+                        xs: '#fff',
+                        md: 'rgb(249 249 249)',
+                    },
+                    border: {
+                        xs: '1px solid rgba(221, 221, 221, 1)',
+                        md: 0,
+                    },
+                    borderRadius: '12px',
+                    py: {
+                        xs: '1.5rem',
+                        md: '0',
+                    },
+                    mx: {
+                        xs: '1.5rem',
+                        md: 'auto',
+                    }
                 }}>
                     <Typography sx={{
-                        ml: '3rem',
-                        mb: '3rem',
-                    }} fontWeight={'700'} fontSize={'35px'} variant={'h1'}>
+                        ml: {
+                            xs: '0',
+                            md: '3rem',
+                        },
+                        mb: {
+                            xs: '0',
+                            md: '3rem',
+                        },
+                        p: {
+                            xs: '2rem',
+                            md: 0,
+                        },
+                        textAlign: {
+                            xs: 'center',
+                            md: 'left',
+                        }
+                    }} fontWeight={'700'} fontSize={'35px'} variant={'h1'}
+                    >
                         What you’ll be getting...
                     </Typography>
 
+                    {/* Table top Heading section*/}
                     <Box
                         sx={{
                             height: '50px',
                             background: theme => theme.palette.common.main,
                             borderRadius: '8px',
-                            display: "grid",
                             gridTemplateColumns: '1fr 1fr 1fr',
                             gridGap: '1.5rem',
                             padding: '0 1.5rem',
                             mb: "8px",
+                            display: {
+                                xs: 'none',
+                                md: 'grid',
+                            }
                         }}
                     >
                         {/* First box for spacing*/}
@@ -67,7 +102,10 @@ const FacilitiesSection = () => {
                     <Box
                         sx={{
                             borderRadius: '12px',
-                            border: '1px solid rgba(221, 221, 221, 1)',
+                            border: {
+                                xs: 0,
+                                md: '1px solid rgba(221, 221, 221, 1)'
+                            },
                             background: '#fff',
                         }}
                     >
@@ -78,7 +116,9 @@ const FacilitiesSection = () => {
                              sx={{
                                  borderBottom: "1px solid rgba(245, 245, 245, 1)",
                                  display: 'grid',
-                                 gridTemplateColumns: '1fr 1fr 1fr',
+                                 gridTemplateColumns: {
+                                     xs: '1fr auto', md: '1fr 1fr 1fr'
+                                 },
                                  gridGap: '1.5rem',
                              }}
                         >
@@ -90,10 +130,18 @@ const FacilitiesSection = () => {
                                 Landlords and Listings and Leads DB
                             </Typography>
 
-                            <Typography sx={{
-                                display: 'flex',
-                                alignItems: 'center',
-                            }} color={'primary'} variant={'body1'}>
+                            <Typography
+                                sx={{
+                                    display: {
+                                       xs: 'none',
+                                        md: 'flex'
+                                    },
+                                    alignItems: 'center',
+                                }}
+                                color={'primary'}
+                                variant={'body1'}
+
+                            >
                                 Free Forever
                             </Typography>
 
@@ -112,7 +160,7 @@ const FacilitiesSection = () => {
                              sx={{
                                  borderBottom: "1px solid rgba(245, 245, 245, 1)",
                                  display: 'grid',
-                                 gridTemplateColumns: '1fr 1fr 1fr',
+                                 gridTemplateColumns: {xs: '1fr auto', md:'1fr 1fr 1fr'},
                                  gridGap: '1.5rem',
                              }}
                         >
@@ -128,7 +176,10 @@ const FacilitiesSection = () => {
                             </Typography>
 
                             <Typography sx={{
-                                display: 'flex',
+                                display: {
+                                    xs: 'none',
+                                    md: 'flex'
+                                },
                                 alignItems: 'center',
                             }} color={'primary'} variant={'body1'}>
                                 Free Forever
@@ -142,7 +193,7 @@ const FacilitiesSection = () => {
                              sx={{
                                  borderBottom: "1px solid rgba(245, 245, 245, 1)",
                                  display: 'grid',
-                                 gridTemplateColumns: '1fr 1fr 1fr',
+                                 gridTemplateColumns: {xs: '1fr auto',md:'1fr 1fr 1fr'},
                                  gridGap: '1.5rem',
                              }}
                         >
@@ -153,7 +204,12 @@ const FacilitiesSection = () => {
                                 Notification and Touch Point Automation
                             </Typography>
 
-                            <Typography color={'primary'} variant={'body1'}>
+                            <Typography sx={{
+                                display: {
+                                    xs: 'none',
+                                    md: 'block',
+                                }
+                            }} color={'primary'} variant={'body1'}>
                                 &nbsp;
                             </Typography>
 
@@ -178,7 +234,7 @@ const FacilitiesSection = () => {
                              sx={{
                                  borderBottom: "1px solid rgba(245, 245, 245, 1)",
                                  display: 'grid',
-                                 gridTemplateColumns: '1fr 1fr 1fr',
+                                 gridTemplateColumns: {xs: '1fr auto',md:'1fr 1fr 1fr'},
                                  gridGap: '1.5rem',
                              }}
                         >
@@ -200,7 +256,12 @@ const FacilitiesSection = () => {
 
                             </Box>
 
-                            <Typography color={'primary'} variant={'body1'}>
+                            <Typography sx={{
+                                display: {
+                                    xs: 'none',
+                                    md: 'block',
+                                }
+                            }} color={'primary'} variant={'body1'}>
                                 &nbsp;
                             </Typography>
 
@@ -224,7 +285,7 @@ const FacilitiesSection = () => {
                              sx={{
                                  borderBottom: "1px solid rgba(245, 245, 245, 1)",
                                  display: 'grid',
-                                 gridTemplateColumns: '1fr 1fr 1fr',
+                                 gridTemplateColumns: {xs: '1fr auto',md:'1fr 1fr 1fr'},
                                  gridGap: '1.5rem',
                              }}
                         >
@@ -246,7 +307,12 @@ const FacilitiesSection = () => {
                                 </Box>
 
                             </Box>
-                            <Typography color={'primary'} variant={'body1'}>
+                            <Typography sx={{
+                                display: {
+                                    xs: 'none',
+                                    md: 'block',
+                                }
+                            }} color={'primary'} variant={'body1'}>
                                 &nbsp;
                             </Typography>
 

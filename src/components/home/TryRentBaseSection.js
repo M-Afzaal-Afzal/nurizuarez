@@ -35,7 +35,7 @@ const TryRentBaseSection = () => {
                 mb: '2rem',
                 display: 'grid',
                 gridGap: '2rem',
-                gridTemplateColumns: '1fr 1fr',
+                gridTemplateColumns: {xs: '1fr', md: '1fr 1fr'},
             }}
         >
 
@@ -57,33 +57,42 @@ const TryRentBaseSection = () => {
                     </Typography>
                 </Box>
 
-                <Typography fontWeight={'bold'} variant={'body1'}>
-                    No credit card needed
-                </Typography>
+                <Box xs={{
+                    display: {
+                        xs: 'none',
+                        md: 'block',
+                    }
+                }}>
 
-                <Box mt={'2.5rem'}>
-                    <Typography variant={'body1'}>
-                        Trusted by Agent at
+                    <Typography fontWeight={'bold'} variant={'body1'}>
+                        No credit card needed
                     </Typography>
+
+                    <Box mt={'2.5rem'}>
+                        <Typography variant={'body1'}>
+                            Trusted by Agent at
+                        </Typography>
+                    </Box>
+
+                    <Stack mt={'1rem'} direction={'row'} spacing={3}>
+                        <Box>
+                            <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
+                        </Box>
+
+                        <Box>
+                            <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
+                        </Box>
+
+                        <Box>
+                            <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
+                        </Box>
+
+                        <Box>
+                            <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
+                        </Box>
+                    </Stack>
+
                 </Box>
-
-                <Stack mt={'1rem'} direction={'row'} spacing={3}>
-                    <Box>
-                        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
-                    </Box>
-
-                    <Box>
-                        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
-                    </Box>
-
-                    <Box>
-                        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
-                    </Box>
-
-                    <Box>
-                        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
-                    </Box>
-                </Stack>
 
             </Box>
 
@@ -165,11 +174,16 @@ const TryRentBaseSection = () => {
                             Your role
                         </Typography>
 
-                        <Stack direction={'row'} spacing={2}>
+                        <Box display={'flex'} sx={{
+                            maxWidth: {
+                                xs: '275px',
+                                md: 'auto',
+                            }
+                        }} flexWrap={'wrap'} direction={'row'} spacing={2}>
 
                             {
                                 roles.map((role, index) => (
-                                    <Box>
+                                    <Box margin={'8px'}>
                                         <Chip
                                             label={role}
                                             variant={(selectedRole === index) ? 'filled' : "outlined"}
@@ -192,7 +206,7 @@ const TryRentBaseSection = () => {
                             }
 
 
-                        </Stack>
+                        </Box>
 
                     </Box>
 

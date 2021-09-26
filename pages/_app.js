@@ -8,9 +8,11 @@ import theme from '../src/theme/theme';
 import createEmotionCache from '../src/utils/createEmotionCache';
 import Header from "../src/components/layout/Header";
 import Footer from "../src/components/layout/Footer";
-
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
+import "swiper/css";
+import "swiper/css/pagination"
+import '../src/styles/slider.css';
 
 export default function MyApp(props) {
     const {Component, emotionCache = clientSideEmotionCache, pageProps} = props;
