@@ -50,7 +50,7 @@ const RentalSection = () => {
     // Tabs Data
     const data = [
         {
-            name: "for agents",
+            name: "For Agents",
             options: [
                 {
                     name: "Stay Organized",
@@ -79,7 +79,7 @@ const RentalSection = () => {
             ]
         },
         {
-            name: "for offices",
+            name: "For Offices",
             options: [
                 {
                     name: "Increase Agents Productivity",
@@ -149,7 +149,7 @@ const RentalSection = () => {
                 sx={{
                     borderBottom: 1,
                     maxWidth: {
-                        xs: '30rem',
+                        xs: '18rem',
                         md: '40rem'
                     },
                     mx: 'auto',
@@ -175,6 +175,15 @@ const RentalSection = () => {
                                         xs: '25px',
                                         me: '35px'
                                     },
+                                    padding: {
+                                        xs: 0,
+                                        md: '12px 16px',
+                                    },
+                                    margin: {
+                                        xs: '0 12px',
+                                        md: '0',
+                                    },
+                                    textTransform: 'unset',
                                     fontWeight: '700',
                                 }} label={name} {...a11yProps(0)}
                             />
@@ -195,206 +204,10 @@ const RentalSection = () => {
                         gridTemplateColumns: "1fr 1fr 1fr",
                         justifyContent: 'center',
                         alignItems: 'center',
-                        maxWidth: '45rem',
-                        mx: 'auto',
-                    }}
-                >
-                    {/*/!* Tab Panel Names* for desktop/}*/}
-                    {
-                        data[value].options.map(({name}, index) => (
-                            <ButtonPrimaryText sx={{
-                                display: {
-                                    xs: 'none',
-                                    md: 'block',
-                                }
-                            }} active={index === selectedSubOption} onClick={() => {
-                                selectSubOption(index);
-                            }}
-                            >
-                                {name}
-                            </ButtonPrimaryText>
-                        ))
-                    }
-
-
-                    {/*    Tab Panel Names for mobile*/}
-                    {
-                        data[value].options.map(({name}, index) => (
-                            <ButtonPrimaryText sx={{
-                                display: {
-                                    xs: 'block',
-                                    md: 'none',
-                                },
-                                color: (index === selectedSubOption) ? "#fff" : 'rgba(132, 132, 132, 1)',
-                                background: (index === selectedSubOption) ? "rgba(98, 0, 214, 1)" : 'transparent',
-                                border: (index === selectedSubOption) ? '1px solid rgba(98, 0, 214, 1)' : '1px solid rgba(132, 132, 132, 1)',
-                                margin: '12px',
-                                '&:hover': {
-                                    background: "rgba(98, 0, 214, 1)",
-                                    color: "#fff",
-                                }
-
-                            }} onClick={() => {
-                                selectSubOption(index);
-                            }}
-                            >
-                                {name}
-                            </ButtonPrimaryText>
-                        ))
-                    }
-
-                </Box>
-
-                {/* Tab Panel Section for desktop*/}
-                <Box
-                    sx={{
-                        display: {
-                            xs: 'none',
-                            md: 'grid',
-                        },
-                        justifyContent: "center",
-                        alignItems: 'center',
-                        gridTemplateColumns: "1fr 1fr",
-                        gridGap: '2rem',
-                        mt: "1.5rem",
-                    }}
-                >
-                    <Box sx={{
-                        display: 'flex',
-                        justifyContent: 'flex-end',
-                    }}>
-                        <Image
-                            src={data[value].options[selectedSubOption].imgUrl}
-                            width={320}
-                            height={445}
-                        />
-                    </Box>
-
-                    <Box sx={{
-                        height: '100%',
-                    }}>
-                        <Box sx={{
-                            p: '1.5rem',
-                            maxWidth: "347px",
-                            height: '100%',
-                            border: "1px solid rgba(0, 0, 0, 1)",
-                            borderRadius: '6px',
-                        }}>
-
-                            <Typography
-                                sx={{
-                                    fontSize: '22px',
-                                    fontWeight: "bold",
-                                }}
-                                variant={'body1'}
-                            >
-                                {data[value].options[selectedSubOption].heading}
-                            </Typography>
-
-                            <Typography
-                                variant={'body1'}
-                                sx={{
-                                    fontSize: '14px',
-                                    color: theme => theme.palette.primary.main,
-                                    py: '.5rem',
-                                }}
-                            >
-                                {data[value].options[selectedSubOption].subHeading}
-                            </Typography>
-
-                            <Typography lineHeight={'30px'} fontSize={'16px'} variant={'body1'}>
-                                {data[value].options[selectedSubOption].description}
-                            </Typography>
-
-                            <Box py={'1.5rem'}>
-                                <PrimaryButtonContained sx={{
-                                    width: "187px",
-                                    height: "50px",
-
-                                }}>
-                                    Try For Free
-                                </PrimaryButtonContained>
-                            </Box>
-
-                            <Typography lineHeight={'22px'} fontSize={'16px'} variant={'body1'}>
-                                Join now and get <br/>
-                                <Box sx={{
-                                    color: theme => theme.palette.primary.main,
-                                    fontWeight: 'bold',
-                                }} component={'span'}>
-                                    Essentials free for life
-                                </Box>
-                            </Typography>
-
-
-                        </Box>
-                    </Box>
-
-                </Box>
-
-                {/*    Tab Panel Section for tablet */}
-                <Box sx={{
-                    display: {
-                        xs: 'block',
-                        md: 'none',
-                    }
-                }} py={'2rem'}>
-                    <Typography
-                        textAlign={'center'}
-                        sx={{
-                            fontSize: '25px',
-                            fontWeight: 'bold',
-                        }} variant={'h1'}
-                    >
-                        Database & CRM
-                    </Typography>
-
-                    <Typography sx={{
-                        mt: '12px',
-                        fontSize: '16px',
-                        textAlign: 'center',
-                    }} variant={'body1'}>
-                        Save countless hours by streamlining your lead intake <br/> with our qualifying tools.
-                    </Typography>
-
-                    <Typography color={'primary'} sx={{
-                        mt: '12px',
-                        fontSize: '16px',
-                        textAlign: 'center',
-                        fontWeight: '600',
-
-                    }} variant={'body1'}>
-                        Saves agents 10-15 hours a week
-                    </Typography>
-
-                {/*    Image*/}
-                    <Box sx={{
-                        mt: '1rem',
-                        display: 'flex',
-                        justifyContent: 'center',
-                    }}>
-                        <Image src={'/home/mocks/tablet/heroTablet.svg'}  width={334} height={207.31}/>
-                    </Box>
-
-                </Box>
-
-            </TabPanel>
-
-            {/*First tab panel i. for offices*/}
-
-            <TabPanel value={value} index={1}>
-
-                <Box
-                    sx={{
-                        display: 'grid',
-                        gridTemplateColumns: "1fr 1fr 1fr",
-                        justifyContent: 'center',
-                        alignItems: 'center',
                         maxWidth: '50rem',
                         mx: 'auto',
                     }}
                 >
-
                     {/*/!* Tab Panel Names* for desktop/}*/}
                     {
                         data[value].options.map(({name}, index) => (
@@ -421,10 +234,18 @@ const RentalSection = () => {
                                     xs: 'block',
                                     md: 'none',
                                 },
+                                height: '100%',
                                 color: (index === selectedSubOption) ? "#fff" : 'rgba(132, 132, 132, 1)',
                                 background: (index === selectedSubOption) ? "rgba(98, 0, 214, 1)" : 'transparent',
                                 border: (index === selectedSubOption) ? '1px solid rgba(98, 0, 214, 1)' : '1px solid rgba(132, 132, 132, 1)',
-                                margin: '12px',
+                                margin: {
+                                    xs: '3px',
+                                    md: '8px',
+                                },
+                                fontSize: {
+                                    xs: '14px',
+                                    me: '35px'
+                                },
                                 '&:hover': {
                                     background: "rgba(98, 0, 214, 1)",
                                     color: "#fff",
@@ -438,92 +259,6 @@ const RentalSection = () => {
                             </ButtonPrimaryText>
                         ))
                     }
-
-                </Box>
-
-                <Box
-                    sx={{
-                        display: {
-                            xs: 'none',
-                            md: 'grid',
-                        },
-                        justifyContent: "center",
-                        alignItems: 'center',
-                        gridTemplateColumns: "1fr 1fr",
-                        gridGap: '2rem',
-                        mt: "1.5rem",
-                    }}
-                >
-                    <Box sx={{
-                        display: 'flex',
-                        justifyContent: 'flex-end',
-                    }}>
-                        <Image
-                            src={data[value].options[selectedSubOption].imgUrl}
-                            width={320}
-                            height={445}
-                        />
-                    </Box>
-
-                    <Box sx={{
-                        height: '100%',
-                    }}>
-                        <Box sx={{
-                            p: '1.5rem',
-                            maxWidth: "347px",
-                            height: '100%',
-                            border: "1px solid rgba(0, 0, 0, 1)",
-                            borderRadius: '6px',
-                        }}>
-
-                            <Typography
-                                sx={{
-                                    fontSize: '22px',
-                                    fontWeight: "bold",
-                                }}
-                                variant={'body1'}
-                            >
-                                {data[value].options[selectedSubOption].heading}
-                            </Typography>
-
-                            <Typography
-                                variant={'body1'}
-                                sx={{
-                                    fontSize: '14px',
-                                    color: theme => theme.palette.primary.main,
-                                    py: '.5rem',
-                                }}
-                            >
-                                {data[value].options[selectedSubOption].subHeading}
-                            </Typography>
-
-                            <Typography lineHeight={'30px'} fontSize={'16px'} variant={'body1'}>
-                                {data[value].options[selectedSubOption].description}
-                            </Typography>
-
-                            <Box py={'1.5rem'}>
-                                <PrimaryButtonContained sx={{
-                                    width: "187px",
-                                    height: "50px",
-
-                                }}>
-                                    Try For Free
-                                </PrimaryButtonContained>
-                            </Box>
-
-                            <Typography lineHeight={'22px'} fontSize={'16px'} variant={'body1'}>
-                                Join now and get <br/>
-                                <Box sx={{
-                                    color: theme => theme.palette.primary.main,
-                                    fontWeight: 'bold',
-                                }} component={'span'}>
-                                    Essentials free for life
-                                </Box>
-                            </Typography>
-
-
-                        </Box>
-                    </Box>
 
                 </Box>
 
@@ -660,6 +395,207 @@ const RentalSection = () => {
 
                 </Box>
 
+            </TabPanel>
+
+            {/*Second tab panel i. for offices*/}
+            <TabPanel value={value} index={1}>
+
+                <Box
+                    sx={{
+                        display: 'grid',
+                        gridTemplateColumns: "1fr 1fr 1fr",
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        maxWidth: '50rem',
+                        mx: 'auto',
+                    }}
+                >
+                    {/*/!* Tab Panel Names* for desktop/}*/}
+                    {
+                        data[value].options.map(({name}, index) => (
+                            <ButtonPrimaryText sx={{
+                                display: {
+                                    xs: 'none',
+                                    md: 'block',
+                                }
+                            }} active={index === selectedSubOption} onClick={() => {
+                                selectSubOption(index);
+                            }}
+                            >
+                                {name}
+                            </ButtonPrimaryText>
+                        ))
+                    }
+
+
+                    {/*    Tab Panel Names for mobile*/}
+                    {
+                        data[value].options.map(({name}, index) => (
+                            <ButtonPrimaryText sx={{
+                                display: {
+                                    xs: 'block',
+                                    md: 'none',
+                                },
+                                height: '100%',
+                                color: (index === selectedSubOption) ? "#fff" : 'rgba(132, 132, 132, 1)',
+                                background: (index === selectedSubOption) ? "rgba(98, 0, 214, 1)" : 'transparent',
+                                border: (index === selectedSubOption) ? '1px solid rgba(98, 0, 214, 1)' : '1px solid rgba(132, 132, 132, 1)',
+                                margin: {
+                                    xs: '3px',
+                                    md: '8px',
+                                },
+                                fontSize: {
+                                    xs: '14px',
+                                    me: '35px'
+                                },
+                                '&:hover': {
+                                    background: "rgba(98, 0, 214, 1)",
+                                    color: "#fff",
+                                }
+
+                            }} onClick={() => {
+                                selectSubOption(index);
+                            }}
+                            >
+                                {name}
+                            </ButtonPrimaryText>
+                        ))
+                    }
+
+                </Box>
+
+                {/* Tab Panel Section for desktop*/}
+                <Box
+                    sx={{
+                        display: {
+                            xs: 'none',
+                            md: 'grid',
+                        },
+                        justifyContent: "center",
+                        alignItems: 'center',
+                        gridTemplateColumns: "1fr 1fr",
+                        gridGap: '2rem',
+                        mt: "1.5rem",
+                    }}
+                >
+                    <Box sx={{
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                    }}>
+                        <Image
+                            src={data[value].options[selectedSubOption].imgUrl}
+                            width={320}
+                            height={445}
+                        />
+                    </Box>
+
+                    <Box sx={{
+                        height: '100%',
+                    }}>
+                        <Box sx={{
+                            p: '1.5rem',
+                            maxWidth: "347px",
+                            height: '100%',
+                            border: "1px solid rgba(0, 0, 0, 1)",
+                            borderRadius: '6px',
+                        }}>
+
+                            <Typography
+                                sx={{
+                                    fontSize: '22px',
+                                    fontWeight: "bold",
+                                }}
+                                variant={'body1'}
+                            >
+                                {data[value].options[selectedSubOption].heading}
+                            </Typography>
+
+                            <Typography
+                                variant={'body1'}
+                                sx={{
+                                    fontSize: '14px',
+                                    color: theme => theme.palette.primary.main,
+                                    py: '.5rem',
+                                }}
+                            >
+                                {data[value].options[selectedSubOption].subHeading}
+                            </Typography>
+
+                            <Typography lineHeight={'30px'} fontSize={'16px'} variant={'body1'}>
+                                {data[value].options[selectedSubOption].description}
+                            </Typography>
+
+                            <Box py={'1.5rem'}>
+                                <PrimaryButtonContained sx={{
+                                    width: "187px",
+                                    height: "50px",
+
+                                }}>
+                                    Try For Free
+                                </PrimaryButtonContained>
+                            </Box>
+
+                            <Typography lineHeight={'22px'} fontSize={'16px'} variant={'body1'}>
+                                Join now and get <br/>
+                                <Box sx={{
+                                    color: theme => theme.palette.primary.main,
+                                    fontWeight: 'bold',
+                                }} component={'span'}>
+                                    Essentials free for life
+                                </Box>
+                            </Typography>
+
+
+                        </Box>
+                    </Box>
+
+                </Box>
+
+                {/*    Tab Panel Section for tablet */}
+                <Box sx={{
+                    display: {
+                        xs: 'block',
+                        md: 'none',
+                    }
+                }} py={'2rem'}>
+                    <Typography
+                        textAlign={'center'}
+                        sx={{
+                            fontSize: '25px',
+                            fontWeight: 'bold',
+                        }} variant={'h1'}
+                    >
+                        Database & CRM
+                    </Typography>
+
+                    <Typography sx={{
+                        mt: '12px',
+                        fontSize: '16px',
+                        textAlign: 'center',
+                    }} variant={'body1'}>
+                        Save countless hours by streamlining your lead intake <br/> with our qualifying tools.
+                    </Typography>
+
+                    <Typography color={'primary'} sx={{
+                        mt: '12px',
+                        fontSize: '16px',
+                        textAlign: 'center',
+                        fontWeight: '600',
+
+                    }} variant={'body1'}>
+                        Saves agents 10-15 hours a week
+                    </Typography>
+
+                    {/*    Image*/}
+                    <Box sx={{
+                        mt: '1rem',
+                        display: 'flex',
+                        justifyContent: 'center',
+                    }}>
+                        <Image src={'/home/mocks/tablet/heroTablet.svg'}  width={334} height={207.31}/>
+                    </Box>
+
+                </Box>
 
             </TabPanel>
 

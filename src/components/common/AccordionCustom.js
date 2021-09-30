@@ -18,12 +18,24 @@ const AccordionCustom = ({heading, description}) => {
                 background: 'unset',
             },
             '.css-yw020d-MuiAccordionSummary-expandIconWrapper': {
-                paddingLeft: "3rem",
-                paddingRight: '3rem'
+                paddingLeft: {
+                    xs: '1.5rem',
+                    md:'3rem',
+                },
+                paddingRight: {
+                    xs: '1.5rem',
+                    md:'3rem',
+                },
             },
             '.css-yw020d-MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-                paddingLeft: "3rem",
-                paddingRight: '3rem',
+                paddingLeft: {
+                    xs: '1.5rem',
+                    md:'3rem',
+                },
+                paddingRight: {
+                    xs: '1.5rem',
+                    md:'3rem',
+                },
             }
 
         }}>
@@ -43,7 +55,10 @@ const AccordionCustom = ({heading, description}) => {
                 }}>
 
                     <Typography sx={{
-                        px: '3rem',
+                        px: {
+                            xs: '1.5rem',
+                            md:'3rem',
+                        },
                     }} variant={'body1'} fontWeight={'400'}>
                         {heading}
                     </Typography>
@@ -55,7 +70,16 @@ const AccordionCustom = ({heading, description}) => {
                 color: 'black',
                 borderTop: '1px solid #eee',
             }}>
-                <Box py={'1.5rem'} px={'3rem'}>
+                <Box sx={{
+                    py: {
+                        xs: '1.5rem',
+                        md:'3rem',
+                    },
+                    px: {
+                        xs: '1.5rem',
+                        md:'3rem',
+                    },
+                }} >
                     {
                         description.map(desc => (
                             <Typography variant={'body1'}>

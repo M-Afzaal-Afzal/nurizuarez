@@ -27,9 +27,15 @@ const TryRentBaseSection = () => {
         <Box
             sx={{
                 maxWidth: '991px',
-                mx: 'auto',
-                px: '1.5rem',
+                px: {
+                    xs: '1rem',
+                    md: '1.5rem'
+                },
                 py: '3rem',
+                mx: {
+                    xs: '8px',
+                    md: 'auto',
+                },
                 borderRadius: '12px',
                 border: '1px solid rgba(221, 221, 221, 1)',
                 mb: '2rem',
@@ -42,7 +48,12 @@ const TryRentBaseSection = () => {
             {/* Left Section*/}
             <Box>
 
-                <Typography fontWeight={'700'} fontSize={'35px'} variant={'h1'}>
+                <Typography sx={{
+                    fontSize: {
+                        xs: '25px',
+                        md: '35px',
+                    }
+                }} fontWeight={'700'} variant={'h1'}>
                     Try RentBase for your <br/>
                     team or office.
                 </Typography>

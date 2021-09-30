@@ -6,7 +6,12 @@ import TestimonialsSection from "./TestimonialsSection";
 const AgentsSection = () => {
     return (
         <Box mt={'1rem'} pb={'4rem'}>
-            <Container maxWidth={'xl'}>
+            <Container sx={{
+                px: {
+                    xs: '0',
+                    md: '24px',
+                }
+            }} maxWidth={'xl'}>
                 <Typography
                     textAlign={'center'}
                     variant={'h1'}

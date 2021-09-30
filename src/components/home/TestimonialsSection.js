@@ -28,7 +28,7 @@ const TestimonialsSection = () => {
                  // flexWrap={'wrap'}
             >
 
-                <Swiper slidesPerView={'auto'} pagination={{
+                <Swiper slidesPerView={'auto'} spaceBetween={6} pagination={{
                     "clickable": true
                 }} className="mySwiper">
                     <SwiperSlide>

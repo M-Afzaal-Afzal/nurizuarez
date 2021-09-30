@@ -11,6 +11,10 @@ const HeroSection = () => {
     return (
         <Container sx={{
             pt: '3rem',
+            px: {
+              xs: '20px',
+              md: '24px',
+            },
             pb: {
                 xs: '6rem',
                 md: 0,
@@ -85,6 +89,12 @@ const HeroSection = () => {
                             color: {
                                 xs: '#fff',
                                 md: 'rgba(0, 0, 0, 1)'
+                            },
+                            fontSize: {
+                                xs: '41px',
+                                md: '51px',
+                                lg: '56px',
+                                'xxl': '66px'
                             }
                         }}
                         variant={'h1'}

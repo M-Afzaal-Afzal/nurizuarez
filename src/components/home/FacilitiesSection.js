@@ -38,7 +38,7 @@ const FacilitiesSection = () => {
                         md: '0',
                     },
                     mx: {
-                        xs: '1.5rem',
+                        xs: '8px',
                         md: 'auto',
                     }
                 }}>
@@ -52,14 +52,18 @@ const FacilitiesSection = () => {
                             md: '3rem',
                         },
                         p: {
-                            xs: '2rem',
+                            xs: '8px',
                             md: 0,
                         },
                         textAlign: {
                             xs: 'center',
                             md: 'left',
+                        },
+                        fontSize: {
+                            xs: '25px',
+                            md: '35px',
                         }
-                    }} fontWeight={'700'} fontSize={'35px'} variant={'h1'}
+                    }} fontWeight={'700'} variant={'h1'}
                     >
                         What you’ll be getting...
                     </Typography>

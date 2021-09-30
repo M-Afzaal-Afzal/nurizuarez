@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Container, Divider, IconButton, Stack} from "@mui/material";
+import {Box, Container, Divider, IconButton} from "@mui/material";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -9,13 +9,13 @@ import ButtonPrimaryText from "../common/buttons/ButtonPrimaryText";
 const Footer = () => {
     return (
         <Box sx={{
-            height: '100px',
+            // height: '100px',
             background: (theme) => theme.palette.common.main,
         }}>
             <Container
                 sx={{
                     height: '100%',
-                    py: '1rem',
+                    py: '1.5rem',
                 }}
                 maxWidth={'xxl'}
 
@@ -23,14 +23,28 @@ const Footer = () => {
                 <Box
                     display={'grid'}
                     height={'100%'}
-                    gridTemplateColumns={'auto 1fr auto'}
+                    gridTemplateColumns={{
+                        xs: '1fr',
+                        md: 'auto 1fr auto',
+                    }}
                     sx={{
                         gridColumnGap:'2rem',
+                        gridRowGap: '1rem',
+                        placeItems: {
+                            xs: 'center',
+                            md: 'unset',
+                        },
                     }}
                 >
 
                     {/* left icons section*/}
-                    <Box display={'grid'}
+                    <Box sx={{
+                        order: {
+                            xs: 10,
+                            md: 'unset',
+                        },
+
+                    }}  display={'grid'}
                          gridTemplateColumns={'1fr 1fr 1fr 1fr'}
                          justifyContent={'center'}
                     >
@@ -81,15 +95,23 @@ const Footer = () => {
                     </Box>
 
                     {/*     right section     */}
-                    <Stack sx={{
+                    <Box sx={{
+                        display: 'flex',
                         color: '#fff',
-                    }} direction={'row'} spacing={2} justifyContent={'center'} alignItems={'center'}>
+                    }} direction={'row'}
+                         spacing={2}
+                         justifyContent={'center'}
+                         alignItems={'center'}>
                         <Box height={'100%'} display={'flex'} alignItems={'center'}>
                             <Divider sx={{
                                 width: '2px',
                                 height: '2rem',
                                 background: '#fff',
                                 my: 'auto',
+                                display: {
+                                    xs:'none',
+                                    md: 'block',
+                                }
                             }} flexItem light variant="middle"/>
                         </Box>
                         <ButtonPrimaryText sx={{
@@ -104,7 +126,7 @@ const Footer = () => {
                         }} >
                             Privacy
                         </ButtonPrimaryText>
-                    </Stack>
+                    </Box>
 
                 </Box>
             </Container>

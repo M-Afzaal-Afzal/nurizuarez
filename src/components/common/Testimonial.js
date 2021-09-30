@@ -96,18 +96,17 @@ const Testimonial = () => {
 
             {/*     Tablet section*/}
             <Box sx={{
-                width: {
-                    xs: "328px",
-                    md: "340",
-                    lg: '390px',
-                },
                 display: {
                     xs: 'block',
                     md: 'none',
                 },
-                border: '1px solid rgba(0, 0, 0, 1)',
-                borderRadius: '8px',
-                p: '1rem',
+                border: '1px solid #000',
+                borderRadius: '20px',
+                boxShadow:'-2px 4px 7px rgba(0, 0, 0, 0.25)',
+                p: {
+                    xs: '1rem',
+                    md: '1rem',
+                },
             }}>
 
                 {/* Top Section*/}
