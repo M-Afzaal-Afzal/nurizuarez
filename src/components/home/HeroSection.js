@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Container from '@mui/material/Container';
 import Typewriter from 'typewriter-effect';
 import {Box, IconButton, Typography} from "@mui/material";
@@ -6,10 +6,28 @@ import Image from "next/image";
 import PrimaryButtonContained from "../common/buttons/PrimaryButtonContained";
 import PlayCircleOutlineOutlinedIcon from '@mui/icons-material/PlayCircleOutlineOutlined';
 import Testimonial from "../common/Testimonial";
+import { useInView } from 'react-intersection-observer';
+import {useGlobalContext} from "../../../context/GlobalContext";
 
 const HeroSection = () => {
+
+    const { toggleIsNavbarFixed} = useGlobalContext();
+
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            toggleIsNavbarFixed(false);
+        } else {
+            toggleIsNavbarFixed(true)
+        }
+    },[inView])
+
     return (
-        <Container sx={{
+        <Container ref={ref} sx={{
             pt: '3rem',
             px: {
               xs: '20px',

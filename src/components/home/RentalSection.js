@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import ButtonPrimaryText from "../common/buttons/ButtonPrimaryText";
 import Image from 'next/image';
 import PrimaryButtonContained from "../common/buttons/PrimaryButtonContained";
+import {useGlobalContext} from "../../../context/GlobalContext";
 
 const TabPanel = (props) => {
     const {children, value, index, ...other} = props;
@@ -34,8 +35,7 @@ const RentalSection = () => {
             'aria-controls': `simple-tabpanel-${index}`,
         };
     }
-
-    const [value, setValue] = React.useState(0);
+    const {selectedRentalSection: value,toggleRentalSection } = useGlobalContext();
 
     const [selectedSubOption, setSelectedSubOption] = useState(1);
 
@@ -44,7 +44,7 @@ const RentalSection = () => {
     }
 
     const handleChange = (event, newValue) => {
-        setValue(newValue);
+        toggleRentalSection(newValue);
     };
 
     // Tabs Data

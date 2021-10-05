@@ -13,26 +13,30 @@ const clientSideEmotionCache = createEmotionCache();
 import "swiper/css";
 import "swiper/css/pagination"
 import '../src/styles/slider.css';
+import GlobalContextProvider from "../context/GlobalContext";
 
 export default function MyApp(props) {
     const {Component, emotionCache = clientSideEmotionCache, pageProps} = props;
 
     return (
-        <CacheProvider value={emotionCache}>
-            <Head>
-                <title>My page</title>
-                <meta name="viewport" content="initial-scale=1, width=device-width"/>
-            </Head>
-            <ThemeProvider theme={theme}>
-                {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-                <CssBaseline/>
+        <GlobalContextProvider>
 
-                <Header/>
-                <Component {...pageProps} />
-                <Footer/>
+            <CacheProvider value={emotionCache}>
+                <Head>
+                    <title>My page</title>
+                    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+                </Head>
+                <ThemeProvider theme={theme}>
+                    {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+                    <CssBaseline/>
 
-            </ThemeProvider>
-        </CacheProvider>
+                    <Header/>
+                    <Component {...pageProps} />
+                    <Footer/>
+
+                </ThemeProvider>
+            </CacheProvider>
+        </GlobalContextProvider>
     );
 }
 
