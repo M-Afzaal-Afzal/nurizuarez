@@ -10,6 +10,7 @@ const ButtonGreyContained = React.forwardRef(({children,sx,...props},ref) => {
                     height: '50px',
                     fontSize: '16px',
                     fontWeight: '600',
+                    textTransform: 'capitalize',
                     ...sx,
                 }}
         >

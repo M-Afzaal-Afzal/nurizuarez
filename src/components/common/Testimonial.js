@@ -38,7 +38,7 @@ const Testimonial = () => {
                             borderRadius: '10px',
                         }
                     }}>
-                        <Image src={'/home/profile.png'} width={50} height={50}/>
+                        <img src={'/home/profile.png'} width={50} height={50}/>
                     </Box>
 
                     <Box>
@@ -48,15 +48,24 @@ const Testimonial = () => {
                             }
                         }} textAlign={'left'} position={'relative'} px={'1rem'}>
                             <Box component={'span'} position={'absolute'} left={0} top={-5}>
-                                <Image src={'/home/startingQuote.svg'} width={12} height={12}/>
+                                <img style={{
+                                    width: '12px',
+                                    height: 'auto',
+                                    marginTop: '8px',
+                                }} src={'/home/startingQuote.svg'} />
                             </Box>
                             It is easy to get lost in all the information you’re dealing with on a day-to-day
                             basis.
                             This helps you stay organized and prioritize your time so that you can be a more
                             efficient agent.
-                            <Box component={'span'} pl={'.5rem'}>
-                                <Image src={'/home/startingQuote.svg'} width={12} height={12}/>
-                            </Box>
+                            {/*<Box component={'span'} pl={'.5rem'}>*/}
+                                <img style={{
+                                    width: '12px',
+                                    height: 'auto',
+                                    display: 'inline-block',
+                                    paddingLeft: '.5rem',
+                                }} src={'/home/startingQuote.svg'} />
+                            {/*</Box>*/}
                         </Typography>
                     </Box>
 
