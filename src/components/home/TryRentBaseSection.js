@@ -14,11 +14,30 @@ const TryRentBaseSection = () => {
         setSelectedRole(index);
     }
 
-    const roles = ['Agent', 'Manager', 'real-estate professional', 'Other']
+    const roles = ['Agent', 'Manager', 'Real-estate professional', 'Other']
 
-    const onSubmit = (data) => {
-        console.log(data);
-        console.log(roles[selectedRole])
+    // Example POST method implementation:
+    async function postData(url = '', data = {}) {
+      // Default options are marked with *
+      const response = await fetch(url, {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data) // body data type must match "Content-Type" header
+      });
+      return response.json(); // parses JSON response into native JavaScript objects
+    }
+
+    const onSubmit = (postAttrs) => {
+      const mergedAttrs = { ...postAttrs, role: roles[selectedRole], pageUri: window.location.href };
+      console.log(roles[selectedRole])
+      console.log('attrs posted', mergedAttrs);
+
+      postData('/api/prospect', mergedAttrs)
+      .then(data => {
+        console.log('RESPONSE DATA', data); // JSON data parsed by `data.json()` call
+      });
     };
 
     console.log(errors);
@@ -120,7 +139,7 @@ const TryRentBaseSection = () => {
                             fontSize={'14px'}
                             variant={'h1'}
                         >
-                            Your Name
+                            Full Name
                         </Typography>
 
                         <Controller
@@ -128,7 +147,7 @@ const TryRentBaseSection = () => {
                             control={control}
                             defaultValue=""
                             rules={{
-                                required: "You must have to specify your name",
+                                required: "Your full name is required.",
                             }}
                             render={({field}) => (
                                 <OutlinedInput fullWidth  {...field} />
@@ -149,7 +168,7 @@ const TryRentBaseSection = () => {
                             fontSize={'14px'}
                             variant={'h1'}
                         >
-                            Your Role
+                            Your Email
                         </Typography>
 
                         <Controller
@@ -157,7 +176,7 @@ const TryRentBaseSection = () => {
                             control={control}
                             defaultValue=""
                             rules={{
-                                required: "You must have to specify your email",
+                                required: "A valid email address is required",
                                 pattern: {
                                     value: /^\S+@\S+$/i,
                                     message: 'Invalid Email',

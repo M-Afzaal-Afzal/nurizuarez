@@ -11,6 +11,7 @@
     "@mui/material": "next",
     "@mui/styles": "^5.0.0-rc.1",
     "clsx": "latest",
+    "hubspot": "^2.3.14",
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
