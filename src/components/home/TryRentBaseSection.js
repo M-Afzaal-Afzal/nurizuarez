@@ -31,8 +31,7 @@ const TryRentBaseSection = () => {
 
     const onSubmit = (postAttrs) => {
       const mergedAttrs = { ...postAttrs, role: roles[selectedRole], pageUri: window.location.href };
-      console.log(roles[selectedRole])
-      console.log('attrs posted', mergedAttrs);
+      // console.log('attrs posted', mergedAttrs);
 
       postData('/api/prospect', mergedAttrs)
       .then(data => {
@@ -40,7 +39,9 @@ const TryRentBaseSection = () => {
       });
     };
 
-    console.log(errors);
+    if (errors) {
+      console.log(errors);
+    }
 
     return (
         <Box
