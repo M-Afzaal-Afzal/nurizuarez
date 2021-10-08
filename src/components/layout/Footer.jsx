@@ -81,7 +81,7 @@ const Footer = () => {
                             height: '100%',
                             background: {
                                 xs: 'none',
-                                md:  'rgba(20, 20, 20, 1)'
+                                lg:  'rgba(20, 20, 20, 1)'
                             },
                             display: 'grid',
                             justifyContent: 'center',

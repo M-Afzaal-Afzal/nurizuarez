@@ -1,12 +1,20 @@
 import React, {useState} from 'react';
-import {Box, Typography, OutlinedInput, FormHelperText, Chip, Stack} from "@mui/material";
+import {Box, Typography, OutlinedInput, FormHelperText, Chip, Stack, Modal} from "@mui/material";
 import {useForm, Controller} from "react-hook-form";
 import PrimaryButtonContained from "../common/buttons/PrimaryButtonContained";
 import Image from 'next/image'
 
 const TryRentBaseSection = () => {
 
-    const {control, formState: {errors}, handleSubmit} = useForm();
+    // Success modal functions and state start
+
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    // success modal functions and state end
+
+    const {control, formState: {errors}, reset, handleSubmit} = useForm();
 
     const [selectedRole, setSelectedRole] = useState(0);
 
@@ -36,6 +44,13 @@ const TryRentBaseSection = () => {
       postData('/api/prospect', mergedAttrs)
       .then(data => {
         console.log('RESPONSE DATA', data); // JSON data parsed by `data.json()` call
+        // Here we're resetting the formc
+        reset({
+            name: '',
+            email: '',
+        })
+
+        handleOpen();
       });
     };
 
@@ -249,6 +264,104 @@ const TryRentBaseSection = () => {
 
                 </form>
             </Box>
+
+
+            {/*     Success Modal   */}
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={{
+                    maxWidth: {
+                        xs: '344px',
+                        md: '548px'
+                    },
+                    width: '100%',
+                    // height: '502px',
+                    background: '#fff',
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    bgcolor: 'background.paper',
+                    boxShadow: 24,
+                    p: 4,
+                }}>
+
+                    <Box sx={{
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                    }}>
+                        <Box onClick={handleClose} component={'button'} sx={{
+                            cursor: 'pointer',
+                            background: 'transparent',
+                            border: 'none',
+                        }} fontSize={'11px'}>
+                            x close
+                        </Box>
+                    </Box>
+
+                    {/*     Success Image Logo   */}
+                    <Box mt={'8px'} display={'flex'} justifyContent={'center'}>
+                        <Image src={'/icons/svg/successIcon.svg'} width={81} height={78}/>
+                    </Box>
+
+                    <Typography
+                        sx={{
+                            mt: '1.5rem',
+                            fontSize: '35px',
+                            lineHeight: '33px',
+                            fontFamily: 'Roboto Slab',
+                            fontWeight: 'bold',
+                        }}
+                        textAlign={'center'}
+                        variant={'h1'}
+                    >
+                        Thanks for Signning up!
+                    </Typography>
+
+                    <Typography sx={{
+                        mt: '1.5rem',
+                        fontSize: {
+                            xs: '16px',
+                            md: '18px'
+                        },
+                        color: 'rgba(0, 0, 0, 1)',
+                        lineHeight: '33px',
+                    }} textAlign={'center'} variant={'body1'}>
+                        A confirmation email was sent to your email. <br/>
+                        Didnt get an email? Check your spam <br/>
+                        or <br/>
+                        <Box sx={{
+                            cursor: 'pointer',
+                            color: theme => theme.palette.primary.main,
+                        }} component={'span'}>
+                            Contact us {' '}
+                        </Box>
+                        and we’ll sort it out
+                    </Typography>
+
+                    <Typography sx={{
+                        mt: '3.5rem',
+                        fontSize: '14px',
+                        color: 'rgba(0, 0, 0, 1)',
+                        lineHeight: '33px',
+                    }} textAlign={'center'} variant={'body1'}>
+                        Get the latest word from our CEO <br/>
+                        at our <Box sx={{
+                        cursor: 'pointer',
+                        color: theme => theme.palette.primary.main,
+                    }} component={'span'}
+                    >
+                        RentBase Blog {' '}
+                    </Box>
+                    </Typography>
+
+
+                </Box>
+            </Modal>
 
         </Box>
     );

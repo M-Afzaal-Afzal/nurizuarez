@@ -6,16 +6,16 @@ import Image from "next/image";
 import PrimaryButtonContained from "../common/buttons/PrimaryButtonContained";
 import PlayCircleOutlineOutlinedIcon from '@mui/icons-material/PlayCircleOutlineOutlined';
 import Testimonial from "../common/Testimonial";
-import { useInView } from 'react-intersection-observer';
+import {useInView} from 'react-intersection-observer';
 import {useGlobalContext} from "../../../context/GlobalContext";
 
 const HeroSection = () => {
 
-    const { toggleIsNavbarFixed} = useGlobalContext();
+    const {toggleIsNavbarFixed} = useGlobalContext();
 
-    const { ref, inView, entry } = useInView({
+    const {ref, inView, entry} = useInView({
         /* Optional options */
-        threshold: 0,
+        threshold: .7,
     });
 
     useEffect(() => {
@@ -24,14 +24,14 @@ const HeroSection = () => {
         } else {
             toggleIsNavbarFixed(true)
         }
-    },[inView])
+    }, [inView])
 
     return (
         <Container ref={ref} sx={{
             pt: '3rem',
             px: {
-              xs: '20px',
-              md: '24px',
+                xs: '20px',
+                md: '24px',
             },
             pb: {
                 xs: '6rem',
@@ -120,17 +120,21 @@ const HeroSection = () => {
                         Free more time & Close more deals
                     </Typography>
 
-                    <Typography sx={{
+                    <Box sx={{
                         fontSize: '22px',
-                    }} variant={'body1'}>
+                    }}>
                         RentBase is your {" "}
-                        <Box component={'span'} fontWeight={'bold'}>
+                        <Box sx={{
+                            fontSize: '22px',
+                        }} component={'span'} fontWeight={'bold'}>
                             all-in-on
                         </Box> data-driven operating system enabling {" "}
-                        <Box component={'span'} fontWeight={'bold'}>
+                        <Box sx={{
+                            fontSize: '22px',
+                        }} component={'span'} fontWeight={'bold'}>
                             real estate agents
                         </Box> to automate their renal business and unlock future deals
-                    </Typography>
+                    </Box>
 
                     {/* Header Buttons Section*/}
                     <Box sx={{
@@ -145,10 +149,35 @@ const HeroSection = () => {
                         </PrimaryButtonContained>
 
                         <IconButton color={'primary'} size={'large'}>
-                            <PlayCircleOutlineOutlinedIcon sx={{
-                                width: '52px',
-                                height: '52px',
-                            }}/>
+                            <Box sx={{
+                                display: 'grid',
+                                gridTemplateColumns: '1fr',
+                                gridTemplateRows: '1fr',
+                                placeItems: 'center',
+                            }}>
+                                <Box sx={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    gridColumn: '1/-1',
+                                    gridRow: '1/-1',
+                                }}>
+                                    <Image priority={true} src={'/icons/png/circle.png'} width={52} height={52}/>
+                                </Box>
+                                <Box sx={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    gridColumn: '1/-1',
+                                    gridRow: '1/-1',
+                                }}>
+                                    <Image priority={true} src={'/icons/png/playbtn.png'} width={15} height={17}/>
+                                </Box>
+                            </Box>
+                            {/*<PlayCircleOutlineOutlinedIcon sx={{*/}
+                            {/*    width: '52px',*/}
+                            {/*    height: '52px',*/}
+                            {/*}}/>*/}
                         </IconButton>
 
                     </Box>
