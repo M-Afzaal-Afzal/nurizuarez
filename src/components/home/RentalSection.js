@@ -129,8 +129,7 @@ const RentalSection = () => {
                     textAlign={'center'}
                     variant={'h1'}
                 >
-                    Start Making Your Rental Data
-                    Work For You
+                    Make Your Rental Data Work for You
                 </Typography>
 
                 <Typography
@@ -140,8 +139,7 @@ const RentalSection = () => {
                     textAlign={'center'}
                     variant={'body1'}
                 >
-                    With your data our CRM and full automation rental operating system for realtors we’ll maximize your
-                    current ROI and open new passive revenue lanes by using the same data you already own.
+                    Our CRM and rental operating system takes information you already have and builds predictive automations, turning passive revenues into active ones. Simply put, without doing any more work (and with proven time savers) RentBase will maximize your current ROI.
                 </Typography>
             </Box>
 
