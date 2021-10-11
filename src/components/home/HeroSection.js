@@ -192,7 +192,7 @@ const HeroSection = () => {
                         <Typography fontSize={'14px'} variant={'body1'}
                         >
                             Try our essential package for free now, and see why we’re the newest necessity in real estate.
-                            
+                            <br/>
                             Sign up in minutes, no CC required.
                         </Typography>
                     </Box>
