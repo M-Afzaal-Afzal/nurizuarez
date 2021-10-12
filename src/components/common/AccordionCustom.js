@@ -81,8 +81,8 @@ const AccordionCustom = ({heading, description}) => {
                     },
                 }} >
                     {
-                        description.map(desc => (
-                            <Typography variant={'body1'}>
+                        description.map((desc,i) => (
+                            <Typography key={i} variant={'body1'}>
                                 {desc}
                             </Typography>
                         ))
