@@ -65,7 +65,7 @@ const FacilitiesSection = () => {
                         }
                     }} fontWeight={'700'} variant={'h1'}
                     >
-                        What you’ll be getting...
+                        Save time and effort with:
                     </Typography>
 
                     {/* Table top Heading section*/}

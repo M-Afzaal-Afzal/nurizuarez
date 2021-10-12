@@ -30,14 +30,14 @@ const CtaBannerSection = () => {
                         }
                     }}
                 >
-                    Join now and get our {' '}
+                    Get our essential offerings for free if you join now {' '}
                     <Typography
                         variant={'body1'}
                         fontWeight={'bold'}
                         component={'span'}
                         fontSize={'22px'}
                     >
-                        Essentials free for life
+
                     </Typography>
                 </Typography>
 
@@ -48,7 +48,7 @@ const CtaBannerSection = () => {
                     }
                 }} justifyContent={'flex-end'}>
                     <ButtonGreyContained>
-                        Try For Free
+                        Start for Free
                     </ButtonGreyContained>
                 </Box>
 

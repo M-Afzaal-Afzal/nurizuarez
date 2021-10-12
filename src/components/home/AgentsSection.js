@@ -24,8 +24,8 @@ const AgentsSection = () => {
                     }}
                     lineHeight={'44px'}
                 >
-                    Don’t just take it from us. <br/>
-                    Take it from agents who are already using RentBase
+                    Don’t take our word for it. <br/>
+                    <small>Agents using RentBase saved enough time to actually write these reviews:</small>
                 </Typography>
 
                 <Box py={'2rem'}>

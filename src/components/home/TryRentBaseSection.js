@@ -89,17 +89,19 @@ const TryRentBaseSection = () => {
                         md: '35px',
                     }
                 }} fontWeight={'700'} variant={'h1'}>
-                    Try RentBase for your <br/>
-                    team or office.
+                    Get RentBase for your <br/>
+                    team or office now.
                 </Typography>
 
                 <Box sx={{
                     py: '2rem',
                 }}>
                     <Typography variant={'body1'}>
-                        With our combined decades of experience in residential leasing, we’ve created a best-in-class
-                        platform to help agents across the country save time, stay organized, and close more rental
-                        deals.
+                    With our combined decades of experience in residential leasing,
+                    we’ve built a best-in-class platform to help agents across the country save time, 
+                    stay organized, and close more deals. And that’s just with our freemium option.
+                    It’s time to open more doors and close more deals with RentBase.
+
                     </Typography>
                 </Box>
 

@@ -88,10 +88,10 @@ const HeroSection = () => {
                             md: 'flex-start',
                         }
                     }} variant={'body1'}>
-                        Realestate &nbsp;
+                        Real-Estate &nbsp;
                         <Typewriter
                             options={{
-                                strings: ['Agent?', 'Manager?'],
+                                strings: ['Agent?', 'Team Lead?'],
                                 autoStart: true,
                                 loop: true,
                                 deleteChars: 5,
@@ -117,23 +117,24 @@ const HeroSection = () => {
                         }}
                         variant={'h1'}
                     >
-                        Free more time & Close more deals
+                        Open doors. Close deals.
                     </Typography>
 
                     <Box sx={{
                         fontSize: '22px',
                     }}>
-                        RentBase is your {" "}
+                        RentBase is a data-driven, predictive rentals operating system that {" "}
                         <Box sx={{
                             fontSize: '22px',
                         }} component={'span'} fontWeight={'bold'}>
-                            all-in-on
-                        </Box> data-driven operating system enabling {" "}
+                        discovers deals
+                        </Box> {" "}
+                        you never knew you had, while {" "}
                         <Box sx={{
                             fontSize: '22px',
                         }} component={'span'} fontWeight={'bold'}>
-                            real estate agents
-                        </Box> to automate their renal business and unlock future deals
+                            saving you hours
+                        </Box> of work.
                     </Box>
 
                     {/* Header Buttons Section*/}
@@ -145,7 +146,7 @@ const HeroSection = () => {
                     }} display={'flex'} alignItems={'center'} pt={'2rem'}>
 
                         <PrimaryButtonContained>
-                            Sign-Up For Free
+                            Start for Free
                         </PrimaryButtonContained>
 
                         <IconButton color={'primary'} size={'large'}>
@@ -190,7 +191,9 @@ const HeroSection = () => {
                     }}>
                         <Typography fontSize={'14px'} variant={'body1'}
                         >
-                            No credit card needed. 2 mins signup.
+                            Try our essential package for free now, and see why we’re the newest necessity in real estate.
+                            <br/>
+                            Sign up in minutes, no CC required.
                         </Typography>
                     </Box>
 
