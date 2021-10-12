@@ -229,7 +229,7 @@ const TryRentBaseSection = () => {
 
                             {
                                 roles.map((role, index) => (
-                                    <Box margin={'8px'}>
+                                    <Box key={index} margin={'8px'}>
                                         <Chip
                                             label={role}
                                             variant={(selectedRole === index) ? 'filled' : "outlined"}

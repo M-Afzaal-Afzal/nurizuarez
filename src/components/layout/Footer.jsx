@@ -1,21 +1,27 @@
 import React from 'react';
-import {Box, Container, Divider, IconButton} from "@mui/material";
+import {Box, Button, Container, Divider, IconButton, Typography} from "@mui/material";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import ButtonPrimaryText from "../common/buttons/ButtonPrimaryText";
+import {FaTiktok} from "react-icons/fa";
 
 const Footer = () => {
     return (
         <Box sx={{
             // height: '100px',
+            position: 'relative',
             background: (theme) => theme.palette.common.main,
         }}>
             <Container
                 sx={{
                     height: '100%',
                     py: '1.5rem',
+                    pb: {
+                        xs: '8rem',
+                        md: '1.5rem',
+                    },
                 }}
                 maxWidth={'xxl'}
 
@@ -45,7 +51,7 @@ const Footer = () => {
                         },
 
                     }}  display={'grid'}
-                         gridTemplateColumns={'1fr 1fr 1fr 1fr'}
+                         gridTemplateColumns={'1fr 1fr 1fr 1fr 1fr'}
                          justifyContent={'center'}
                     >
                         <IconButton>
@@ -69,6 +75,12 @@ const Footer = () => {
 
                         <IconButton>
                             <LinkedInIcon fontSize={'40px'} sx={{
+                                color: '#fff',
+                            }}/>
+                        </IconButton>
+
+                        <IconButton>
+                            <FaTiktok size={'20.99'} style={{
                                 color: '#fff',
                             }}/>
                         </IconButton>
@@ -129,10 +141,42 @@ const Footer = () => {
                     </Box>
 
                 </Box>
+
             </Container>
+
+            {/*    Mobile Sticky footer on bottom */}
+            <Box sx={{
+                position: 'fixed',
+                bottom: 0,
+                lef: 0,
+                width: '100%',
+                zIndex: 300,
+                background: '#eee',
+                display: {
+                    xs: 'flex',
+                    md: 'none'
+                },
+                justifyContent: 'center',
+                alignItems: 'center',
+                p: '1rem 2rem',
+                border: '1px solid #000000',
+                flexDirection: 'column',
+            }}>
+                <Button sx={{
+                    textTransform: 'unset',
+                }} fullWidth variant={'contained'} color={'primary'}>
+                    Join our Beta
+                </Button>
+
+                <Typography sx={{
+                    pt: '1rem',
+                }} textAlign={'center'} variant={'body1'}>
+                    No credit card needed. 2 mins signup.
+                </Typography>
+
+            </Box>
         </Box>
-    )
-        ;
+    );
 };
 
 export default Footer;
