@@ -229,12 +229,12 @@ const Header = () => {
                         '& .MuiDrawer-paperAnchorLeft': {
                             borderTopRightRadius: '40px',
                             borderBottomRightRadius: '40px',
+                            display: 'grid',
+                            gridTemplateRows: 'auto 1fr auto',
                         },
                         '&:: -webkit-scrollbar': {
                             display: 'none',
                         },
-                        display: 'grid',
-                        gridTemplateRows: 'auto 1fr auto',
                     }}
                 >
                     <Box sx={{
