@@ -19,6 +19,9 @@ export default function handler(req, res) {
     }
     console.log('req', req.body, 'PAYLOAD', payload);
 
+    // submit a form to hubspot -
+    // https://legacydocs.hubspot.com/docs/methods/forms/submit_form
+    // https://aknapen.nl/blog/collect-emails-from-nextjs-form-in-hubspot/
     fetch(url, {
       method: 'POST',
       headers: {
