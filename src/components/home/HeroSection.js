@@ -204,7 +204,12 @@ const HeroSection = () => {
                             md: 'flex',
                         }
                     }} mt={'2rem'}>
-                        <Testimonial/>
+                    <Testimonial
+                      content="... I didn’t realize at the time how spread-out we were through multiple platforms, but RentBase put everything in one place. All of our leads, landlords, documents, and follow-ups are now in one place... "
+                      image=""
+                      name="Austin Heredia"
+                      position="Founder"
+                      company="Chicago Rentals / HomeSmart Connect"/>
                     </Box>
 
 

@@ -5,7 +5,7 @@ import Rating from "react-rating";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
 
-const Testimonial = () => {
+const Testimonial = (props) => {
     return (
         <Box>
 
@@ -38,7 +38,7 @@ const Testimonial = () => {
                             borderRadius: '10px',
                         }
                     }}>
-                        <img src={'/home/profile.png'} width={50} height={50}/>
+                        <img src={props.image || '/home/profile.png'} width={50} height={50}/>
                     </Box>
 
                     <Box>
@@ -54,10 +54,7 @@ const Testimonial = () => {
                                     marginTop: '8px',
                                 }} src={'/home/startingQuote.svg'} />
                             </Box>
-                            It is easy to get lost in all the information you’re dealing with on a day-to-day
-                            basis.
-                            This helps you stay organized and prioritize your time so that you can be a more
-                            efficient agent.
+                            {props.content}
                             {/*<Box component={'span'} pl={'.5rem'}>*/}
                                 <img style={{
                                     width: '12px',
@@ -92,8 +89,8 @@ const Testimonial = () => {
                     />
 
                     <Typography variant={'body1'} fontWeight={'600'} fontSize={'12px'}>
-                        - Ian C. <br/>
-                        Keller Williams Agent
+                        - {props.name} <br/>
+                        {props.position}, {props.company}
                     </Typography>
 
                 </Box>
