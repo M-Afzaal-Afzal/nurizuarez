@@ -80,7 +80,7 @@ const FaqSection = () => {
                     <AccordionCustom
                         heading={'How easy it is to migrate all my listings?'}
                         description={[
-                            'We have created a swift and easy importing flow that should enable you to import your listings in less than 5 minutes.',
+                            'Our easy to follow listing and landlords import flow that should enable you to import your listings in less than 5 minutes.',
                             'Not sure how to do it? Need help importing?',
                             'We would love to help, just contact us - support@therentbase.com.'
                         ]}
