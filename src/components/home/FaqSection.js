@@ -32,52 +32,57 @@ const FaqSection = () => {
                 <Box mt={'3rem'}>
 
                     <AccordionCustom
-                        heading={'Why join the fang gang?'}
-                        description={[
-                            ' Fang Gang is a collection developed by four NFT fanatic that have been in the NFT space\n' +
-                            '                            since early March. All of us have worked on previous collections, helped out other\n' +
-                            '                            communities and are collectors ourselves.',
-                            'Our roadmap is comprised of real goals.',
-                            ' Besides having a clean, thoughtful collection which we will grow a tightly knit\n' +
-                            '                    community around, we\'re committed to help the preservation of wildlife by helping two\n' +
-                            '                    NGOs along the way.',
-                        ]}
+                        heading={'Who is RentBase meant for?'}
+                        description={["RentBase is built for solo agents or brokers working as a team to help organize and manage all landlords, listings and leads in one place.", "Property managers and DIY landlords with multiple properties can also benefit from the time saving values RentBase provides such as leads pre-qualification and rental listing management."]}
                     />
 
 
                     <AccordionCustom
-                        heading={'What about the minting process?'}
+                        heading={'Will you share or sell my data?'}
                         description={[
-                            ' Minting will start on Aug 30th right here, on fanggang.io. 0.04 ETH per Fangster. Max 10\n' +
-                            '                                Fangsters per transaction. The reveal will be the day after launch - 31st of August -\n' +
-                            '                                because who would want to wait a week just to see their sick NFT?\n' +
-                            '                            ',
+                            'No we do not sell or share any of your data. Full stop. No fine print.',
+                            'We take data protection very seriously at RentBase and know how important it is to keep your make sure your data remains only your data.'
                         ]}
                     />
 
                     <AccordionCustom
-                        heading={'What can i do with my fangster?'}
+                        heading={'What can I do with all the extra time I\'ve saved?'}
                         description={[
-                            ' Besides having the dopest character represent you on every platform, you\'ll be able to\n' +
-                            '                                trade it, use it to enter our giveaways and claim exclusive rewards that are for holders\n' +
-                            '                                only. Besides that it will also give you a voice in our community driven events.'
+                            ' Besides feeling like a master of your own time again, you can:',
+                            '1. Get more rental deals in your pipeline - touch base with old leads, find more listings to work on, etc.',
+                            '2. Contact your landlords and engage with them - they might be into buying more properties or selling their own properties.',
+                            '3. Have proper dinner and a movie with family and friends - with RentBase all you have to do to reply to a lead is send our pre-qualification lead, the lead will take it from there.'
                         ]}
                     />
 
                     <AccordionCustom
-                        heading={'Can\'t wait join the gang?'}
+                        heading={'Is this real life?'}
                         description={[
-                            ' Head on over to our Discord server and get involved with the community. Or if you have\n' +
-                            '                                any questions about NFTs, ETH, the blockchain, OpenSea or anything else! We\'re happy to\n' +
-                            '                                help.',
+                            "YES! We've been working hard since 2020 to get you the best in class rentals database and CRM.",
+                            "Our focus is saving you time to enable you manage and grow your rental business, with automations and best practices embedded to the rental cycles."
                         ]}
                     />
 
                     <AccordionCustom
-                        heading={'Tokenomicz'}
+                        heading={'Will I close more deals?'}
                         description={[
                             ' We have reserved 60 Fangsters for giveaways, events, collabs and 4 to portray our team\n' +
                             '                                members.',
+                        ]}
+                    />
+                    <AccordionCustom
+                        heading={'Will i be able to integrate with my other platforms?'}
+                        description={[
+                            'This is on our roadmap and you can expect to see some integrations in early 2022.\n' +
+                            "We would love to know more about your needs so feel free to drop us a line at support@therentbase.com with the platforms you'd like us to integrate with.",
+                        ]}
+                    />
+                    <AccordionCustom
+                        heading={'How easy it is to migrate all my listings?'}
+                        description={[
+                            'We have created a swift and easy importing flow that should enable you to import your listings in less than 5 minutes.',
+                            'Not sure how to do it? Need help importing?',
+                            'We would love to help, just contact us - support@therentbase.com.'
                         ]}
                     />
 
