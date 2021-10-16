@@ -86,13 +86,12 @@ const HeroSection = () => {
                         justifyContent: {
                             xs: 'center',
                             md: 'flex-start',
-                        },
-                        whiteSpace: 'pre-wrap'
+                        }
                     }} variant={'body1'}>
-                        Realestate {' '}
+                        Real-Estate &nbsp;
                         <Typewriter
                             options={{
-                                strings: ['Agent?', 'Manager?'],
+                                strings: ['Agent?', 'Team Lead?'],
                                 autoStart: true,
                                 loop: true,
                                 deleteChars: 5,
@@ -118,47 +117,24 @@ const HeroSection = () => {
                         }}
                         variant={'h1'}
                     >
-                        Open doors. <br/>
-                        Close deals.
+                        Open doors. Close deals.
                     </Typography>
 
-                    <Box style={{
-                        fontSize: '22px',
-                    }} sx={{
+                    <Box sx={{
                         fontSize: '22px',
                     }}>
-                        <Box component={'span'} style={{
-                            fontSize: '22px',
-                        }}>
-
-                            RentBase is your {" "}
-                        </Box>
-
+                        RentBase is a data-driven, predictive rentals operating system that {" "}
                         <Box sx={{
                             fontSize: '22px',
                         }} component={'span'} fontWeight={'bold'}>
-                            all-in-on {' '}
-                        </Box>
-                        <Box component={'span'} style={{
-                            fontSize: '22px',
-                        }}>
-
-                            data-driven operating system enabling {" "}
-                        </Box>
-
+                        discovers deals
+                        </Box> {" "}
+                        you never knew you had, while {" "}
                         <Box sx={{
                             fontSize: '22px',
                         }} component={'span'} fontWeight={'bold'}>
-                            real estate agents {' '}
-                        </Box>
-
-                        <Box component={'span'} style={{
-                            fontSize: '22px',
-                        }}>
-
-                            to automate their renal business and unlock future deals
-                        </Box>
-
+                            saving you hours
+                        </Box> of work.
                     </Box>
 
                     {/* Header Buttons Section*/}
@@ -167,7 +143,7 @@ const HeroSection = () => {
                             xs: 'none',
                             md: 'flex',
                         }
-                    }} display={'flex'} alignItems={'center'} pt={'1rem'}>
+                    }} display={'flex'} alignItems={'center'} pt={'2rem'}>
 
                         <PrimaryButtonContained>
                             Start for Free
@@ -228,7 +204,12 @@ const HeroSection = () => {
                             md: 'flex',
                         }
                     }} mt={'2rem'}>
-                        <Testimonial singleTestimonial/>
+                    <Testimonial
+                      content="... I didn’t realize at the time how spread-out we were through multiple platforms, but RentBase put everything in one place. All of our leads, landlords, documents, and follow-ups are now in one place... "
+                      image=""
+                      name="Austin Heredia"
+                      position="Founder"
+                      company="Chicago Rentals / HomeSmart Connect"/>
                     </Box>
 
 

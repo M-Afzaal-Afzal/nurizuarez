@@ -33,20 +33,34 @@ const TestimonialsSection = () => {
                 }} className="mySwiper">
                     <SwiperSlide>
 
-                            <Testimonial/>
+                    <Testimonial
+                      content="It is easy to get lost in all the information you’re dealing with on a day-to-day basis. This helps you stay organized and prioritize your time so that you can be a more efficient agent."
+                      image="/home/ian_cotterell_rentbase_rental_crm_agent.png"
+                      name="Ian Cotterell"
+                      position="Agent"
+                      company="Keller Williams Realty"/>
+
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                    <Testimonial
+                      content="Now that I’m using RentBase, I’m never adding a new listing to Airtable again."
+                      image="/home/calder_billings_rentbase_rental_crm_agent.png"
+                      name="Calder Billings"
+                      position="Agent"
+                      company="Keller Williams Realty"/>
 
                     </SwiperSlide>
 
                     <SwiperSlide>
 
-                            <Testimonial/>
-
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-
-                            <Testimonial/>
-
+                    <Testimonial
+                      content="... I didn’t realize at the time how spread-out we were through multiple platforms, but RentBase put everything in one place. All of our leads, landlords, documents, and follow-ups are now in one place... "
+                      image=""
+                      name="Austin Heredia"
+                      position="Founder"
+                      company="Chicago Rentals / HomeSmart Connect"/>
+                      
                     </SwiperSlide>
 
                 </Swiper>

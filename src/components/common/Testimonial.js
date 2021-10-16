@@ -5,7 +5,7 @@ import Rating from "react-rating";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
 
-const Testimonial = ({text,singleTestimonial}) => {
+const Testimonial = (props) => {
     return (
         <Box>
 
@@ -38,7 +38,7 @@ const Testimonial = ({text,singleTestimonial}) => {
                             borderRadius: '10px',
                         }
                     }}>
-                        <img src={'/home/profile.png'} width={50} height={50}/>
+                        <img src={props.image || '/home/profile.png'} width={50} height={50}/>
                     </Box>
 
                     <Box>
@@ -52,32 +52,17 @@ const Testimonial = ({text,singleTestimonial}) => {
                                     width: '12px',
                                     height: 'auto',
                                     marginTop: '8px',
-                                }} src={'/home/startingQuote.svg'}/>
+                                }} src={'/home/startingQuote.svg'} />
                             </Box>
-                            {
-                                text ? (
-                                    <>
-                                        {text}
-                                    </>
-                                ) : (
-                                    <>
-                                        It is easy to get lost in all the information you’re dealing with on a
-                                        day-to-day
-                                        basis.
-                                        This helps you stay organized and prioritize your time so that you can be a more
-                                        efficient agent.
-                                    </>
-                                )
-                            }
-                            <Box component={'span'} >
-                            <img style={{
-                                // width: '12px',
-                                width: singleTestimonial ? '' : '12px',
-                                // height: '7.9px',
-                                display: 'inline-block',
-                                paddingLeft: '.5rem',
-                            }} src={'/home/startingQuote.svg'}/>
-                            </Box>
+                            {props.content}
+                            {/*<Box component={'span'} pl={'.5rem'}>*/}
+                                <img style={{
+                                    width: '12px',
+                                    height: 'auto',
+                                    display: 'inline-block',
+                                    paddingLeft: '.5rem',
+                                }} src={'/home/startingQuote.svg'} />
+                            {/*</Box>*/}
                         </Typography>
                     </Box>
 
@@ -104,12 +89,15 @@ const Testimonial = ({text,singleTestimonial}) => {
                     />
 
                     <Typography variant={'body1'} fontWeight={'600'} fontSize={'12px'}>
-                        - Ian C. <br/>
-                        Keller Williams Agent
+                        - {props.name} <br/>
+                        {props.position}, {props.company}
                     </Typography>
 
                 </Box>
             </Box>
+
+
+
 
 
             {/*     Tablet section*/}
@@ -120,7 +108,7 @@ const Testimonial = ({text,singleTestimonial}) => {
                 },
                 border: '1px solid #000',
                 borderRadius: '20px',
-                boxShadow: '-2px 4px 7px rgba(0, 0, 0, 0.25)',
+                boxShadow:'-2px 4px 7px rgba(0, 0, 0, 0.25)',
                 p: {
                     xs: '1rem',
                     md: '1rem',
@@ -184,7 +172,7 @@ const Testimonial = ({text,singleTestimonial}) => {
                         fontSize: {
                             xs: '14px',
                         }
-                    }} textAlign={'left'} position={'relative'}>
+                    }} textAlign={'left'} position={'relative'} >
 
                         It is easy to get lost in all the information you’re dealing with on a day-to-day
                         basis. ...
@@ -193,7 +181,7 @@ const Testimonial = ({text,singleTestimonial}) => {
                     <Typography sx={{
                         cursor: 'pointer',
                         mt: '8px',
-                    }} color={'primary'}>
+                    }} color={'primary'} >
                         read all
                     </Typography>
 
