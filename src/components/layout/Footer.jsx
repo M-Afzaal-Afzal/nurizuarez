@@ -93,7 +93,7 @@ const Footer = () => {
                             height: '100%',
                             background: {
                                 xs: 'none',
-                                lg:  'rgba(20, 20, 20, 1)'
+                                // lg:  'rgba(20, 20, 20, 1)'
                             },
                             display: 'grid',
                             justifyContent: 'center',
@@ -165,7 +165,7 @@ const Footer = () => {
                 <Button sx={{
                     textTransform: 'unset',
                 }} fullWidth variant={'contained'} color={'primary'}>
-                    Join our Beta
+                    Start For Free
                 </Button>
 
                 <Typography sx={{

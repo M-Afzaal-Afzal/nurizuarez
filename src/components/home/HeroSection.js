@@ -167,44 +167,44 @@ const HeroSection = () => {
                         display: {
                             xs: 'none',
                             md: 'flex',
-                        }
-                    }} display={'flex'} alignItems={'center'} pt={'2rem'}>
+                        },
+                    }} display={'flex'} alignItems={'center'} py={'2rem'}>
 
                         <PrimaryButtonContained>
                             Start for Free
                         </PrimaryButtonContained>
 
-                        <IconButton color={'primary'} size={'large'}>
-                            <Box sx={{
-                                display: 'grid',
-                                gridTemplateColumns: '1fr',
-                                gridTemplateRows: '1fr',
-                                placeItems: 'center',
-                            }}>
-                                <Box sx={{
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    gridColumn: '1/-1',
-                                    gridRow: '1/-1',
-                                }}>
-                                    <Image priority={true} src={'/icons/png/circle.png'} width={52} height={52}/>
-                                </Box>
-                                <Box sx={{
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    gridColumn: '1/-1',
-                                    gridRow: '1/-1',
-                                }}>
-                                    <Image priority={true} src={'/icons/png/playbtn.png'} width={15} height={17}/>
-                                </Box>
-                            </Box>
-                            {/*<PlayCircleOutlineOutlinedIcon sx={{*/}
-                            {/*    width: '52px',*/}
-                            {/*    height: '52px',*/}
-                            {/*}}/>*/}
-                        </IconButton>
+                        {/*<IconButton color={'primary'} size={'large'}>*/}
+                        {/*    <Box sx={{*/}
+                        {/*        display: 'grid',*/}
+                        {/*        gridTemplateColumns: '1fr',*/}
+                        {/*        gridTemplateRows: '1fr',*/}
+                        {/*        placeItems: 'center',*/}
+                        {/*    }}>*/}
+                        {/*        <Box sx={{*/}
+                        {/*            display: 'flex',*/}
+                        {/*            justifyContent: 'center',*/}
+                        {/*            alignItems: 'center',*/}
+                        {/*            gridColumn: '1/-1',*/}
+                        {/*            gridRow: '1/-1',*/}
+                        {/*        }}>*/}
+                        {/*            <Image priority={true} src={'/icons/png/circle.png'} width={52} height={52}/>*/}
+                        {/*        </Box>*/}
+                        {/*        <Box sx={{*/}
+                        {/*            display: 'flex',*/}
+                        {/*            justifyContent: 'center',*/}
+                        {/*            alignItems: 'center',*/}
+                        {/*            gridColumn: '1/-1',*/}
+                        {/*            gridRow: '1/-1',*/}
+                        {/*        }}>*/}
+                        {/*            <Image priority={true} src={'/icons/png/playbtn.png'} width={15} height={17}/>*/}
+                        {/*        </Box>*/}
+                        {/*    </Box>*/}
+                        {/*    /!*<PlayCircleOutlineOutlinedIcon sx={{*!/*/}
+                        {/*    /!*    width: '52px',*!/*/}
+                        {/*    /!*    height: '52px',*!/*/}
+                        {/*    /!*}}/>*!/*/}
+                        {/*</IconButton>*/}
 
                     </Box>
 

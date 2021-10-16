@@ -327,7 +327,7 @@ const RentalSection = () => {
                                     height: "50px",
 
                                 }}>
-                                    Try For Free
+                                    Start For Free
                                 </PrimaryButtonContained>
                             </Box>
 
@@ -529,7 +529,7 @@ const RentalSection = () => {
                                     height: "50px",
 
                                 }}>
-                                    Try For Free
+                                    Start For Free
                                 </PrimaryButtonContained>
                             </Box>
 

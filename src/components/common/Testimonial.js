@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Box, Typography} from "@mui/material";
 import Image from "next/image";
 import Rating from "react-rating";
@@ -6,6 +6,13 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
 
 const Testimonial = (props) => {
+
+    const [isReadMore,setIsReadMore] = useState(false);
+
+    const toggleIsReadMore = () => {
+        setIsReadMore(!isReadMore);
+    }
+
     return (
         <Box sx={{
             height: '100%',
@@ -23,7 +30,8 @@ const Testimonial = (props) => {
                     md: 'grid',
                 },
                 gridTemplateRows: '1fr auto',
-            }}>
+            }}
+            >
 
                 {/* Top Section*/}
                 <Box
@@ -56,16 +64,16 @@ const Testimonial = (props) => {
                                     width: '12px',
                                     height: 'auto',
                                     marginTop: '8px',
-                                }} src={'/home/startingQuote.svg'} />
+                                }} src={'/home/startingQuote.svg'}/>
                             </Box>
                             {props.content}
                             {/*<Box component={'span'} pl={'.5rem'}>*/}
-                                <img style={{
-                                    width: props.isSingleTestimonial ? '20px' : '12px',
-                                    height: 'auto',
-                                    display: 'inline-block',
-                                    paddingLeft: '.5rem',
-                                }} src={'/home/startingQuote.svg'} />
+                            <img style={{
+                                width: props.isSingleTestimonial ? '20px' : '12px',
+                                height: 'auto',
+                                display: 'inline-block',
+                                paddingLeft: '.5rem',
+                            }} src={'/home/startingQuote.svg'}/>
                             {/*</Box>*/}
                         </Typography>
                     </Box>
@@ -101,9 +109,6 @@ const Testimonial = (props) => {
             </Box>
 
 
-
-
-
             {/*     Tablet section*/}
             <Box sx={{
                 display: {
@@ -112,12 +117,14 @@ const Testimonial = (props) => {
                 },
                 border: '1px solid #000',
                 borderRadius: '20px',
-                boxShadow:'-2px 4px 7px rgba(0, 0, 0, 0.25)',
+                boxShadow: '-2px 4px 7px rgba(0, 0, 0, 0.25)',
                 p: {
                     xs: '1rem',
                     md: '1rem',
                 },
-            }}>
+                minHeight: '180px',
+            }}
+            >
 
                 {/* Top Section*/}
                 <Box
@@ -125,6 +132,7 @@ const Testimonial = (props) => {
                         alignItems: 'flex-start',
                         gridGap: '1rem',
                         pt: 0,
+
                     }}
                     display={'grid'}
                     gridTemplateColumns={'auto 1fr'}
@@ -135,7 +143,7 @@ const Testimonial = (props) => {
                             borderRadius: '10px',
                         }
                     }}>
-                        <Image src={'/home/profile.png'} width={50} height={50}/>
+                        <img src={props.image || '/home/profile.png'} width={50} height={50}/>
                     </Box>
 
                     <Box sx={{
@@ -156,8 +164,8 @@ const Testimonial = (props) => {
                         />
 
                         <Typography textAlign={'left'} variant={'body1'} fontWeight={'600'} fontSize={'12px'}>
-                            - Ian C. <br/>
-                            Keller Williams Agent
+                            - {props.name} <br/>
+                            {props.position}, {props.company}
                         </Typography>
 
                     </Box>
@@ -176,18 +184,40 @@ const Testimonial = (props) => {
                         fontSize: {
                             xs: '14px',
                         }
-                    }} textAlign={'left'} position={'relative'} >
+                    }} textAlign={'left'} position={'relative'}>
 
-                        It is easy to get lost in all the information you’re dealing with on a day-to-day
-                        basis. ...
+                        {props.content.length > 150 && !isReadMore ? (
+                            <>
+                                {props.content.substr(0,50)}...
+                            </>
+                        ) : (
+                            <>
+                                {props.content}
+                            </>
+                        ) }
                     </Typography>
 
-                    <Typography sx={{
-                        cursor: 'pointer',
-                        mt: '8px',
-                    }} color={'primary'} >
-                        read all
-                    </Typography>
+                    {
+                        !isReadMore && props.content.length > 150 && (
+                            <Typography onClick={toggleIsReadMore} sx={{
+                                cursor: 'pointer',
+                                mt: '8px',
+                            }} color={'primary'}>
+                                show more
+                            </Typography>
+                        )
+                    }
+
+                    {
+                        isReadMore && props.content.length > 150 && (
+                            <Typography onClick={toggleIsReadMore} sx={{
+                                cursor: 'pointer',
+                                mt: '8px',
+                            }} color={'primary'}>
+                                show less
+                            </Typography>
+                        )
+                    }
 
                 </Box>
             </Box>

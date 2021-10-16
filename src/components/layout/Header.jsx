@@ -212,7 +212,7 @@ const Header = () => {
                                 height: '50px',
                                 textTransform: 'unset',
                             }} color={'primary'} variant={'outlined'}>
-                                Sign-Up For Free
+                                Start For Free
                             </Button>
                         </Box>
 
@@ -370,7 +370,7 @@ const Header = () => {
                             px: '2rem',
                         }}>
                             <Button fullWidth color={'primary'} variant={'contained'}>
-                                Join our Beta
+                                Start For Free
                             </Button>
                         </Box>
 
