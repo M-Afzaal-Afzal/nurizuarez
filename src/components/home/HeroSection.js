@@ -28,7 +28,7 @@ const HeroSection = () => {
     }, [inView])
 
     return (
-        <Container ref={ref} sx={{
+        <Container id={'howItWorks'} ref={ref} sx={{
             pt: '3rem',
             px: {
                 xs: '20px',

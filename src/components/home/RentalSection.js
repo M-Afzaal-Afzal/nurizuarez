@@ -110,7 +110,7 @@ const RentalSection = () => {
     ]
 
     return (
-        <Box>
+        <Box id={'howitworks'}>
 
             {/* heading and paragraph*/}
 

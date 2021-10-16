@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const FacilitiesSection = () => {
     return (
-        <Box position={'relative'}>
+        <Box id={'features'} position={'relative'}>
 
             <Box sx={{
                 '&:before': {

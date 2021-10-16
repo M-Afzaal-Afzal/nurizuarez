@@ -7,9 +7,12 @@ import StarIcon from "@mui/icons-material/Star";
 
 const Testimonial = (props) => {
     return (
-        <Box>
+        <Box sx={{
+            height: '100%',
+        }}>
 
             <Box sx={{
+                height: '100%',
                 width: {
                     xs: "328px",
                     md: "340",
@@ -17,8 +20,9 @@ const Testimonial = (props) => {
                 },
                 display: {
                     xs: 'none',
-                    md: 'block',
-                }
+                    md: 'grid',
+                },
+                gridTemplateRows: '1fr auto',
             }}>
 
                 {/* Top Section*/}
