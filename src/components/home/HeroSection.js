@@ -15,7 +15,7 @@ const HeroSection = () => {
 
     const {ref, inView, entry} = useInView({
         /* Optional options */
-        threshold: .7,
+        threshold: .6,
     });
 
     useEffect(() => {
@@ -86,9 +86,11 @@ const HeroSection = () => {
                         justifyContent: {
                             xs: 'center',
                             md: 'flex-start',
-                        }
+                        },
+                        whiteSpace: 'pre-wrap'
+
                     }} variant={'body1'}>
-                        Real-Estate &nbsp;
+                        Real-Estate {' '}
                         <Typewriter
                             options={{
                                 strings: ['Agent?', 'Team Lead?'],
@@ -117,24 +119,46 @@ const HeroSection = () => {
                         }}
                         variant={'h1'}
                     >
-                        Open doors. Close deals.
+                        Open doors. <br/> Close deals.
                     </Typography>
 
-                    <Box sx={{
+                    <Box style={{
+                        fontSize: '22px',
+                    }} sx={{
                         fontSize: '22px',
                     }}>
-                        RentBase is a data-driven, predictive rentals operating system that {" "}
+                        <Box component={'span'} style={{
+                            fontSize: '22px',
+                        }}>
+
+                            RentBase is a data-driven, predictive rentals operating system that {" "}
+                        </Box>
+
                         <Box sx={{
                             fontSize: '22px',
                         }} component={'span'} fontWeight={'bold'}>
-                        discovers deals
-                        </Box> {" "}
-                        you never knew you had, while {" "}
+                            discovers deals {' '}
+                        </Box>
+                        <Box component={'span'} style={{
+                            fontSize: '22px',
+                        }}>
+
+                            you never knew you had, while {" "}
+                        </Box>
+
                         <Box sx={{
                             fontSize: '22px',
                         }} component={'span'} fontWeight={'bold'}>
-                            saving you hours
-                        </Box> of work.
+                            saving you hours {' '}
+                        </Box>
+
+                        <Box component={'span'} style={{
+                            fontSize: '22px',
+                        }}>
+
+                            of work.
+                        </Box>
+
                     </Box>
 
                     {/* Header Buttons Section*/}
@@ -209,7 +233,9 @@ const HeroSection = () => {
                       image=""
                       name="Austin Heredia"
                       position="Founder"
-                      company="Chicago Rentals / HomeSmart Connect"/>
+                      company="Chicago Rentals / HomeSmart Connect"
+                      isSingleTestimonial
+                    />
                     </Box>
 
 

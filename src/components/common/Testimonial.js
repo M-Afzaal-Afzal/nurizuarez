@@ -57,7 +57,7 @@ const Testimonial = (props) => {
                             {props.content}
                             {/*<Box component={'span'} pl={'.5rem'}>*/}
                                 <img style={{
-                                    width: '12px',
+                                    width: props.isSingleTestimonial ? '20px' : '12px',
                                     height: 'auto',
                                     display: 'inline-block',
                                     paddingLeft: '.5rem',
