@@ -250,6 +250,8 @@ const HeroSection = () => {
                         md: 'flex',
                     }
                 }} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+                    <Fade right>
+
                     <Box sx={{
                         animation: 'float 3s ease-in-out infinite',
                         '@keyframes float': {
@@ -283,6 +285,7 @@ const HeroSection = () => {
                                priority={true}
                         />
                     </Box>
+                    </Fade>
                 </Box>
 
                 {/*    Tablet Image Section*/}
