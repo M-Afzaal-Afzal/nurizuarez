@@ -4,10 +4,11 @@ import Typewriter from 'typewriter-effect';
 import {Box, IconButton, Typography} from "@mui/material";
 import Image from "next/image";
 import PrimaryButtonContained from "../common/buttons/PrimaryButtonContained";
-import PlayCircleOutlineOutlinedIcon from '@mui/icons-material/PlayCircleOutlineOutlined';
+// import PlayCircleOutlineOutlinedIcon from '@mui/icons-material/PlayCircleOutlineOutlined';
 import Testimonial from "../common/Testimonial";
 import {useInView} from 'react-intersection-observer';
 import {useGlobalContext} from "../../../context/GlobalContext";
+import Fade from 'react-reveal/Fade';
 
 const HeroSection = () => {
 
@@ -215,7 +216,8 @@ const HeroSection = () => {
                     }}>
                         <Typography fontSize={'14px'} variant={'body1'}
                         >
-                            Try our essential package for free now, and see why we’re the newest necessity in real estate.
+                            Try our essential package for free now, and see why we’re the newest necessity in real
+                            estate.
                             <br/>
                             Sign up in minutes, no CC required.
                         </Typography>
@@ -228,14 +230,14 @@ const HeroSection = () => {
                             md: 'flex',
                         }
                     }} mt={'2rem'}>
-                    <Testimonial
-                      content="... I didn’t realize at the time how spread-out we were through multiple platforms, but RentBase put everything in one place. All of our leads, landlords, documents, and follow-ups are now in one place... "
-                      image=""
-                      name="Austin Heredia"
-                      position="Founder"
-                      company="Chicago Rentals / HomeSmart Connect"
-                      isSingleTestimonial
-                    />
+                        <Testimonial
+                            content="... I didn’t realize at the time how spread-out we were through multiple platforms, but RentBase put everything in one place. All of our leads, landlords, documents, and follow-ups are now in one place... "
+                            image=""
+                            name="Austin Heredia"
+                            position="Founder"
+                            company="Chicago Rentals / HomeSmart Connect"
+                            isSingleTestimonial
+                        />
                     </Box>
 
 
@@ -248,12 +250,31 @@ const HeroSection = () => {
                         md: 'flex',
                     }
                 }} display={'flex'} justifyContent={'center'} alignItems={'center'}>
-                    <Image src={'/home/heroMobiles.png'}
-                           layout={'intrinsic'}
-                           width={505.23}
-                           height={497.45}
-                           priority={true}
-                    />
+                    <Box sx={{
+                        animation: 'float 3s ease-in-out infinite',
+                        '@keyframes float': {
+                            '0%': {
+                                // boxShadow: '0 5px 15px 0px rgba(0,0,0,0.6)',
+                                transform: 'translatey(0px)',
+                            },
+                            '50%': {
+                                // boxShadow: '0 25px 15px 0px rgba(0,0,0,0.2)',
+                                transform: 'translatey(-20px)',
+                            },
+                            '100%': {
+                                // boxShadow: '0 5px 15px 0px rgba(0,0,0,0.6)',
+                                transform: 'translatey(0px)',
+                            },
+                        }
+                    }}>
+
+                        <Image src={'/home/heroMobiles.png'}
+                               layout={'intrinsic'}
+                               width={505.23}
+                               height={497.45}
+                               priority={true}
+                        />
+                    </Box>
                 </Box>
 
                 {/*    Tablet Image Section*/}

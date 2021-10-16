@@ -14,6 +14,9 @@ import "swiper/css";
 import "swiper/css/pagination"
 import '../src/styles/slider.css';
 import GlobalContextProvider from "../context/GlobalContext";
+import config from 'react-reveal/globals';
+
+config({ ssrFadeout: true });
 
 export default function MyApp(props) {
     const {Component, emotionCache = clientSideEmotionCache, pageProps} = props;
