@@ -297,7 +297,7 @@ const HeroSection = () => {
                     justifyContent: 'center',
                 }}>
                     <Image
-                        src={'/home/mocks/tablet/heroTablet.svg'} width={542}
+                        src={'/home/mocks/tablet/heroTablet.png'} width={542}
                         height={367}
                     />
                 </Box>
