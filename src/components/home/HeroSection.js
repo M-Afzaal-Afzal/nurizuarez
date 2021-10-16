@@ -86,12 +86,13 @@ const HeroSection = () => {
                         justifyContent: {
                             xs: 'center',
                             md: 'flex-start',
-                        }
+                        },
+                        whiteSpace: 'pre-wrap'
                     }} variant={'body1'}>
-                        Real-Estate &nbsp;
+                        Realestate {' '}
                         <Typewriter
                             options={{
-                                strings: ['Agent?', 'Team Lead?'],
+                                strings: ['Agent?', 'Manager?'],
                                 autoStart: true,
                                 loop: true,
                                 deleteChars: 5,
@@ -117,24 +118,47 @@ const HeroSection = () => {
                         }}
                         variant={'h1'}
                     >
-                        Open doors. Close deals.
+                        Open doors. <br/>
+                        Close deals.
                     </Typography>
 
-                    <Box sx={{
+                    <Box style={{
+                        fontSize: '22px',
+                    }} sx={{
                         fontSize: '22px',
                     }}>
-                        RentBase is a data-driven, predictive rentals operating system that {" "}
+                        <Box component={'span'} style={{
+                            fontSize: '22px',
+                        }}>
+
+                            RentBase is your {" "}
+                        </Box>
+
                         <Box sx={{
                             fontSize: '22px',
                         }} component={'span'} fontWeight={'bold'}>
-                        discovers deals
-                        </Box> {" "}
-                        you never knew you had, while {" "}
+                            all-in-on {' '}
+                        </Box>
+                        <Box component={'span'} style={{
+                            fontSize: '22px',
+                        }}>
+
+                            data-driven operating system enabling {" "}
+                        </Box>
+
                         <Box sx={{
                             fontSize: '22px',
                         }} component={'span'} fontWeight={'bold'}>
-                            saving you hours
-                        </Box> of work.
+                            real estate agents {' '}
+                        </Box>
+
+                        <Box component={'span'} style={{
+                            fontSize: '22px',
+                        }}>
+
+                            to automate their renal business and unlock future deals
+                        </Box>
+
                     </Box>
 
                     {/* Header Buttons Section*/}
@@ -143,7 +167,7 @@ const HeroSection = () => {
                             xs: 'none',
                             md: 'flex',
                         }
-                    }} display={'flex'} alignItems={'center'} pt={'2rem'}>
+                    }} display={'flex'} alignItems={'center'} pt={'1rem'}>
 
                         <PrimaryButtonContained>
                             Start for Free
@@ -204,7 +228,7 @@ const HeroSection = () => {
                             md: 'flex',
                         }
                     }} mt={'2rem'}>
-                        <Testimonial/>
+                        <Testimonial singleTestimonial/>
                     </Box>
 
 

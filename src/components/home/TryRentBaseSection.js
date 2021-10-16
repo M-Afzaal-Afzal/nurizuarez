@@ -22,7 +22,7 @@ const TryRentBaseSection = () => {
         setSelectedRole(index);
     }
 
-    const roles = ['Agent', 'Manager', 'Real-estate professional', 'Other']
+    const roles = ['Agent', 'Manager', 'real-estate professional', 'Other']
 
     // Example POST method implementation:
     async function postData(url = '', data = {}) {
@@ -116,29 +116,29 @@ const TryRentBaseSection = () => {
                         No credit card needed
                     </Typography>
 
-                    <Box mt={'2.5rem'}>
-                        <Typography variant={'body1'}>
-                            Trusted by Agent at
-                        </Typography>
-                    </Box>
+                    {/*<Box mt={'2.5rem'}>*/}
+                    {/*    <Typography variant={'body1'}>*/}
+                    {/*        Trusted by Agent at*/}
+                    {/*    </Typography>*/}
+                    {/*</Box>*/}
 
-                    <Stack mt={'1rem'} direction={'row'} spacing={3}>
-                        <Box>
-                            <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
-                        </Box>
+                    {/*<Stack mt={'1rem'} direction={'row'} spacing={3}>*/}
+                    {/*    <Box>*/}
+                    {/*        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>*/}
+                    {/*    </Box>*/}
 
-                        <Box>
-                            <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
-                        </Box>
+                    {/*    <Box>*/}
+                    {/*        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>*/}
+                    {/*    </Box>*/}
 
-                        <Box>
-                            <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
-                        </Box>
+                    {/*    <Box>*/}
+                    {/*        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>*/}
+                    {/*    </Box>*/}
 
-                        <Box>
-                            <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>
-                        </Box>
-                    </Stack>
+                    {/*    <Box>*/}
+                    {/*        <Image src={'/icons/svg/kw.svg'} width={58.6} height={25.75}/>*/}
+                    {/*    </Box>*/}
+                    {/*</Stack>*/}
 
                 </Box>
 
@@ -219,7 +219,7 @@ const TryRentBaseSection = () => {
                             fontSize={'14px'}
                             variant={'h1'}
                         >
-                            Your role
+                            Your Role
                         </Typography>
 
                         <Box display={'flex'} sx={{
