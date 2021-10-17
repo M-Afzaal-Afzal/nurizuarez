@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Typography} from "@mui/material";
 import ButtonGreyContained from "../common/buttons/ButtonGreyContained";
+import {ctaClickHandler} from "../../utils/utils";
 
 const CtaBannerSection = () => {
     return (
@@ -13,7 +14,7 @@ const CtaBannerSection = () => {
                 display: 'grid',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                mx: {xs: '2rem',md: 'auto'},
+                mx: {xs: '8px',md: 'auto'},
                 px: '2rem',
                 gridTemplateColumns: '1fr auto',
             }}>
@@ -47,7 +48,7 @@ const CtaBannerSection = () => {
                         md: 'flex'
                     }
                 }} justifyContent={'flex-end'}>
-                    <ButtonGreyContained>
+                    <ButtonGreyContained onClick={ctaClickHandler}>
                         Start for Free
                     </ButtonGreyContained>
                 </Box>

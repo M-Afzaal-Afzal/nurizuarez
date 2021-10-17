@@ -6,6 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import ButtonPrimaryText from "../common/buttons/ButtonPrimaryText";
 import {FaTiktok} from "react-icons/fa";
+import {ctaClickHandler} from "../../utils/utils";
 
 const Footer = () => {
     return (
@@ -34,7 +35,7 @@ const Footer = () => {
                         md: 'auto 1fr auto',
                     }}
                     sx={{
-                        gridColumnGap:'2rem',
+                        gridColumnGap: '2rem',
                         gridRowGap: '1rem',
                         placeItems: {
                             xs: 'center',
@@ -50,40 +51,44 @@ const Footer = () => {
                             md: 'unset',
                         },
 
-                    }}  display={'grid'}
-                         gridTemplateColumns={'1fr 1fr 1fr 1fr 1fr'}
+                    }} display={'grid'}
+                         // gridTemplateColumns={'1fr 1fr 1fr 1fr 1fr'}
+                         gridTemplateColumns={'1fr 1fr '}
                          justifyContent={'center'}
                     >
-                        <IconButton>
-                            <FacebookIcon fontSize={'40px'} sx={{
-                                color: '#fff',
-                            }}/>
-                        </IconButton>
+                        {/*<IconButton>*/}
+                        {/*    <FacebookIcon fontSize={'40px'} sx={{*/}
+                        {/*        color: '#fff',*/}
+                        {/*    }}/>*/}
+                        {/*</IconButton>*/}
 
                         <IconButton>
-
-                            <InstagramIcon fontSize={'40px'} sx={{
-                                color: '#fff'
-                            }}/>
+                            <a target={'_blank'} href="https://www.instagram.com/therentbase/">
+                                <InstagramIcon fontSize={'40px'} sx={{
+                                    color: '#fff'
+                                }}/>
+                            </a>
                         </IconButton>
 
-                        <IconButton>
-                            <TwitterIcon fontSize={'40px'} sx={{
-                                color: '#fff',
-                            }}/>
-                        </IconButton>
-
-                        <IconButton>
-                            <LinkedInIcon fontSize={'40px'} sx={{
-                                color: '#fff',
-                            }}/>
-                        </IconButton>
+                        {/*<IconButton>*/}
+                        {/*    <TwitterIcon fontSize={'40px'} sx={{*/}
+                        {/*        color: '#fff',*/}
+                        {/*    }}/>*/}
+                        {/*</IconButton>*/}
 
                         <IconButton>
-                            <FaTiktok size={'20.99'} style={{
-                                color: '#fff',
-                            }}/>
+                            <a target={'_blank'} href="https://www.linkedin.com/company/therentbase">
+                                <LinkedInIcon fontSize={'40px'} sx={{
+                                    color: '#fff',
+                                }}/>
+                            </a>
                         </IconButton>
+
+                        {/*<IconButton>*/}
+                        {/*    <FaTiktok size={'20.99'} style={{*/}
+                        {/*        color: '#fff',*/}
+                        {/*    }}/>*/}
+                        {/*</IconButton>*/}
 
                     </Box>
 
@@ -93,7 +98,7 @@ const Footer = () => {
                             height: '100%',
                             background: {
                                 xs: 'none',
-                                lg:  'rgba(20, 20, 20, 1)'
+                                // lg:  'rgba(20, 20, 20, 1)'
                             },
                             display: 'grid',
                             justifyContent: 'center',
@@ -121,7 +126,7 @@ const Footer = () => {
                                 background: '#fff',
                                 my: 'auto',
                                 display: {
-                                    xs:'none',
+                                    xs: 'none',
                                     md: 'block',
                                 }
                             }} flexItem light variant="middle"/>
@@ -129,13 +134,13 @@ const Footer = () => {
                         <ButtonPrimaryText sx={{
                             fontSize: '15px',
                             color: '#fff',
-                        }} >
+                        }}>
                             Terms
                         </ButtonPrimaryText>
                         <ButtonPrimaryText sx={{
                             fontSize: '15px',
                             color: '#fff',
-                        }} >
+                        }}>
                             Privacy
                         </ButtonPrimaryText>
                     </Box>
@@ -151,7 +156,7 @@ const Footer = () => {
                 lef: 0,
                 width: '100%',
                 zIndex: 300,
-                background: '#eee',
+                background: 'rgba(255,255,255,0.9)',
                 display: {
                     xs: 'flex',
                     md: 'none'
@@ -162,10 +167,12 @@ const Footer = () => {
                 border: '1px solid #000000',
                 flexDirection: 'column',
             }}>
-                <Button sx={{
+                <Button
+                    onClick={ctaClickHandler}
+                    sx={{
                     textTransform: 'unset',
                 }} fullWidth variant={'contained'} color={'primary'}>
-                    Join our Beta
+                    Start For Free
                 </Button>
 
                 <Typography sx={{

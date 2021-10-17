@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     Box, Button,
     Container, Divider, Drawer, IconButton, ListItem, ListItemText,
@@ -14,8 +14,13 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import {FaTiktok} from "react-icons/fa";
+import {useRouter} from "next/router";
+import {ctaClickHandler} from "../../utils/utils";
 
 const Header = () => {
+
+    const [itemToNavigate, setItemToNavigate] = useState(null);
+    const router = useRouter();
 
     const {isNavbarFixed, selectedRentalSection, toggleRentalSection} = useGlobalContext();
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -33,6 +38,47 @@ const Header = () => {
 
     };
 
+    const linkClickHandler = (name) => {
+        const elementId = name.toLowerCase();
+        setItemToNavigate(elementId)
+
+        if (itemToNavigate === elementId) {
+            setItemToNavigate(name.toUpperCase())
+        }
+
+    }
+
+    const startForFreeClickHandler = () => {
+        ctaClickHandler();
+        mobileNavToggler(false);
+    }
+
+    useEffect(() => {
+        if (itemToNavigate) {
+
+            if (router.pathname === '/') {
+                const yOffset = -100;
+                const element = document.getElementById(itemToNavigate.toString().toLowerCase());
+                const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({top: y, behavior: 'smooth'});
+                // document.getElementById(itemToNavigate.toString().toLowerCase()).scrollIntoView({
+                //     behavior: 'smooth',
+                // })
+            } else {
+                // router.push('/')
+                //     .then(() => {
+                //         document.getElementById(itemToNavigate.toString().toLowerCase()).scrollIntoView({
+                //             behavior: 'smooth',
+                //         })
+                //     })
+
+            }
+
+
+        }
+    }, [itemToNavigate])
+
     const list = (anchor) => (
         <Box
             sx={{
@@ -49,11 +95,13 @@ const Header = () => {
                 px: '2rem',
                 pt: '3rem',
             }}>
-                {['How it works', 'Testimoninals', 'Features', 'Product Updates'].map((text, index) => (
-                    <ListItem sx={{
+                {[{text:'How it works',id: 'howitworks'},{text:'Testimoninals',id: 'testimonials'}, {text:'Features',id: 'features'}, {text:'Product Updates',id: 'productupdates'}, ].map(({text,id}, index) => (
+                    <ListItem onClick={() => {
+                        linkClickHandler(id);
+                    }} sx={{
                         cursor: 'pointer',
                         py: '1rem',
-                    }} disableRipple button={false} key={text}>
+                    }} disableRipple button={false} key={id}>
                         {/*<ListItemIcon>*/}
                         {/*    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}*/}
                         {/*</ListItemIcon>*/}
@@ -72,7 +120,7 @@ const Header = () => {
 
 
     return (
-        <Box sx={{
+        <Box id={'header'} sx={{
             position: isNavbarFixed ? 'fixed' : 'relative',
             background: isNavbarFixed ? 'rgba(255, 255, 255, 0.65)' : 'relative',
             backdropFilter: 'blur(64px)',
@@ -93,7 +141,7 @@ const Header = () => {
                 }}>
                     {/* Left Side of header*/}
                     <Stack direction={'row'} spacing={'10px'}>
-                        <Box sx={{
+                        <Box onClick={linkClickHandler.bind(this, 'header')} sx={{
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
@@ -113,19 +161,19 @@ const Header = () => {
                             {/*/>*/}
 
                         </Box>
-                        <ButtonPrimaryText>
+                        <ButtonPrimaryText onClick={linkClickHandler.bind(this, 'howitworks')}>
                             How it works
                         </ButtonPrimaryText>
 
-                        <ButtonPrimaryText>
+                        <ButtonPrimaryText onClick={linkClickHandler.bind(this, 'testimonials')}>
                             Testimonials
                         </ButtonPrimaryText>
 
-                        <ButtonPrimaryText>
+                        <ButtonPrimaryText onClick={linkClickHandler.bind(this, 'features')}>
                             Features
                         </ButtonPrimaryText>
 
-                        <ButtonPrimaryText>
+                        <ButtonPrimaryText onClick={linkClickHandler.bind(this, 'productupdates')}>
                             Product Updates
                         </ButtonPrimaryText>
                     </Stack>
@@ -138,7 +186,10 @@ const Header = () => {
                                 divider={<Box>|</Box>} spacing={'0px'}
                                 alignItems={'center'}
                             >
-                                <ButtonPrimaryText onClick={toggleRentalSection.bind(this, 0)}
+                                <ButtonPrimaryText onClick={() => {
+                                    toggleRentalSection(0);
+                                    linkClickHandler( 'howitworks')
+                                }}
                                                    active={selectedRentalSection === 0} sx={{
                                     fontFamily: 'Roboto Slab',
                                     fontWeight: 700,
@@ -146,22 +197,28 @@ const Header = () => {
                                     For Agents
                                 </ButtonPrimaryText>
                                 {/*<Divider orientation="vertical" variant="middle" flexItem />*/}
-                                <ButtonPrimaryText onClick={toggleRentalSection.bind(this, 1)}
-                                                   active={selectedRentalSection === 1} sx={{
-                                    fontFamily: 'Roboto Slab',
-                                    fontWeight: 700,
-                                }}>
+                                <ButtonPrimaryText
+                                    onClick={() => {
+                                        toggleRentalSection( 1);
+                                        linkClickHandler( 'howitworks')
+                                    }}
+                                    active={selectedRentalSection === 1}
+                                    sx={{
+                                        fontFamily: 'Roboto Slab',
+                                        fontWeight: 700,
+                                    }}
+                                >
                                     For Offices
                                 </ButtonPrimaryText>
                             </Stack>
                         </Box>
 
                         <Box>
-                            <Button sx={{
+                            <Button onClick={startForFreeClickHandler} sx={{
                                 height: '50px',
                                 textTransform: 'unset',
                             }} color={'primary'} variant={'outlined'}>
-                                Sign-Up For Free
+                                Start For Free
                             </Button>
                         </Box>
 
@@ -174,12 +231,14 @@ const Header = () => {
                 <Stack
                     sx={{
                         display: {
-                            xs: 'flex',
+                            xs: 'grid',
                             md: 'none'
                         },
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         height: '100px',
+                        gridTemplateColumns: '31px 1fr 31px',
+                        placeItems: 'center',
                     }}
                     direction={'row'}
                 >
@@ -244,7 +303,7 @@ const Header = () => {
                         display: 'flex',
                         justifyContent: 'flex-end',
                     }}>
-                        <IconButton onClick={toggleDrawer('left',false)}>
+                        <IconButton onClick={toggleDrawer('left', false)}>
                             <CloseIcon/>
                         </IconButton>
                     </Box>
@@ -284,7 +343,11 @@ const Header = () => {
                             }}
                                 alignItems={'center'}
                             >
-                                <ButtonPrimaryText onClick={toggleRentalSection.bind(this, 0)}
+                                <ButtonPrimaryText onClick={() => {
+                                    toggleRentalSection( 0);
+                                    linkClickHandler('howitworks');
+                                    mobileNavToggler(false);
+                                } }
                                                    active={selectedRentalSection === 0} sx={{
                                     fontFamily: 'Roboto Slab',
                                     fontWeight: 700,
@@ -293,7 +356,11 @@ const Header = () => {
                                     For Agents
                                 </ButtonPrimaryText>
                                 {/*<Divider orientation="vertical" variant="middle" flexItem />*/}
-                                <ButtonPrimaryText onClick={toggleRentalSection.bind(this, 1)}
+                                <ButtonPrimaryText onClick={() => {
+                                    toggleRentalSection( 1);
+                                    linkClickHandler('howitworks');
+                                    mobileNavToggler(false);
+                                } }
                                                    active={selectedRentalSection === 1} sx={{
                                     fontFamily: 'Roboto Slab',
                                     fontWeight: 700,
@@ -310,8 +377,8 @@ const Header = () => {
                             py: '2rem',
                             px: '2rem',
                         }}>
-                            <Button fullWidth color={'primary'} variant={'contained'}>
-                                Join our Beta
+                            <Button onClick={startForFreeClickHandler} fullWidth color={'primary'} variant={'contained'}>
+                                Start For Free
                             </Button>
                         </Box>
 
@@ -329,36 +396,40 @@ const Header = () => {
                                 //  gridTemplateColumns={'1fr 1fr 1fr 1fr 1fr'}
                                 //  justifyContent={'left'}
                             >
-                                <IconButton>
-                                    <FacebookIcon fontSize={'40px'} sx={{
-                                        color: theme => theme.palette.primary.main,
-                                    }}/>
-                                </IconButton>
+                                {/*<IconButton>*/}
+                                {/*    <FacebookIcon fontSize={'40px'} sx={{*/}
+                                {/*        color: theme => theme.palette.primary.main,*/}
+                                {/*    }}/>*/}
+                                {/*</IconButton>*/}
 
-                                <IconButton>
-                                    <FaTiktok size={'20.99'} style={{
-                                        color: 'rgba(98, 0, 214, 1)',
-                                    }}/>
-                                </IconButton>
+                                {/*<IconButton>*/}
+                                {/*    <FaTiktok size={'20.99'} style={{*/}
+                                {/*        color: 'rgba(98, 0, 214, 1)',*/}
+                                {/*    }}/>*/}
+                                {/*</IconButton>*/}
 
+                                    <a target={'_blank'} href="https://www.instagram.com/therentbase/">
                                 <IconButton>
 
-                                    <InstagramIcon fontSize={'40px'} sx={{
-                                        color: theme => theme.palette.primary.main,
-                                    }}/>
+                                        <InstagramIcon fontSize={'40px'} sx={{
+                                            color: 'rgba(98, 0, 214, 1)'
+                                        }}/>
                                 </IconButton>
+                                    </a>
 
-                                <IconButton>
-                                    <TwitterIcon fontSize={'40px'} sx={{
-                                        color: theme => theme.palette.primary.main,
-                                    }}/>
-                                </IconButton>
+                                {/*<IconButton>*/}
+                                {/*    <TwitterIcon fontSize={'40px'} sx={{*/}
+                                {/*        color: theme => theme.palette.primary.main,*/}
+                                {/*    }}/>*/}
+                                {/*</IconButton>*/}
 
+                                    <a target={'_blank'} href="https://www.linkedin.com/company/therentbase">
                                 <IconButton>
-                                    <LinkedInIcon fontSize={'40px'} sx={{
-                                        color: theme => theme.palette.primary.main,
-                                    }}/>
+                                        <LinkedInIcon fontSize={'40px'} sx={{
+                                           color: 'rgba(98, 0, 214, 1)',
+                                        }}/>
                                 </IconButton>
+                                    </a>
 
                             </Box>
                         </Box>

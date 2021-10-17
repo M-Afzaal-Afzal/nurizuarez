@@ -10,7 +10,7 @@ const FaqSection = () => {
 
         <Box
             pt={'1.5rem'}
-            id={'faq'}
+            id={'productupdates'}
             pb={'5rem'}
         >
             <Box sx={{

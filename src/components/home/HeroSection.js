@@ -4,10 +4,12 @@ import Typewriter from 'typewriter-effect';
 import {Box, IconButton, Typography} from "@mui/material";
 import Image from "next/image";
 import PrimaryButtonContained from "../common/buttons/PrimaryButtonContained";
-import PlayCircleOutlineOutlinedIcon from '@mui/icons-material/PlayCircleOutlineOutlined';
+// import PlayCircleOutlineOutlinedIcon from '@mui/icons-material/PlayCircleOutlineOutlined';
 import Testimonial from "../common/Testimonial";
 import {useInView} from 'react-intersection-observer';
 import {useGlobalContext} from "../../../context/GlobalContext";
+import Fade from 'react-reveal/Fade';
+import {ctaClickHandler} from "../../utils/utils";
 
 const HeroSection = () => {
 
@@ -15,7 +17,7 @@ const HeroSection = () => {
 
     const {ref, inView, entry} = useInView({
         /* Optional options */
-        threshold: .7,
+        threshold: .6,
     });
 
     useEffect(() => {
@@ -27,7 +29,7 @@ const HeroSection = () => {
     }, [inView])
 
     return (
-        <Container ref={ref} sx={{
+        <Container id={'howItWorks'} ref={ref} sx={{
             pt: '3rem',
             px: {
                 xs: '20px',
@@ -52,6 +54,7 @@ const HeroSection = () => {
                     xs: '1fr',
                     md: '1fr 1fr',
                 },
+                alignItems: 'flex-start',
                 '&:before': {
                     xs: {
                         content: "''",
@@ -86,9 +89,11 @@ const HeroSection = () => {
                         justifyContent: {
                             xs: 'center',
                             md: 'flex-start',
-                        }
+                        },
+                        whiteSpace: 'pre-wrap'
+
                     }} variant={'body1'}>
-                        Real-Estate &nbsp;
+                        Real-Estate {' '}
                         <Typewriter
                             options={{
                                 strings: ['Agent?', 'Team Lead?'],
@@ -117,24 +122,46 @@ const HeroSection = () => {
                         }}
                         variant={'h1'}
                     >
-                        Open doors. Close deals.
+                        Open doors. <br/> Close deals.
                     </Typography>
 
-                    <Box sx={{
+                    <Box style={{
+                        fontSize: '22px',
+                    }} sx={{
                         fontSize: '22px',
                     }}>
-                        RentBase is a data-driven, predictive rentals operating system that {" "}
+                        <Box component={'span'} style={{
+                            fontSize: '22px',
+                        }}>
+
+                            RentBase is a data-driven, predictive rentals operating system that {" "}
+                        </Box>
+
                         <Box sx={{
                             fontSize: '22px',
                         }} component={'span'} fontWeight={'bold'}>
-                        discovers deals
-                        </Box> {" "}
-                        you never knew you had, while {" "}
+                            discovers deals {' '}
+                        </Box>
+                        <Box component={'span'} style={{
+                            fontSize: '22px',
+                        }}>
+
+                            you never knew you had, while {" "}
+                        </Box>
+
                         <Box sx={{
                             fontSize: '22px',
                         }} component={'span'} fontWeight={'bold'}>
-                            saving you hours
-                        </Box> of work.
+                            saving you hours {' '}
+                        </Box>
+
+                        <Box component={'span'} style={{
+                            fontSize: '22px',
+                        }}>
+
+                            of work.
+                        </Box>
+
                     </Box>
 
                     {/* Header Buttons Section*/}
@@ -142,44 +169,44 @@ const HeroSection = () => {
                         display: {
                             xs: 'none',
                             md: 'flex',
-                        }
-                    }} display={'flex'} alignItems={'center'} pt={'2rem'}>
+                        },
+                    }} display={'flex'} alignItems={'center'} py={'2rem'}>
 
-                        <PrimaryButtonContained>
+                        <PrimaryButtonContained onClick={ctaClickHandler}>
                             Start for Free
                         </PrimaryButtonContained>
 
-                        <IconButton color={'primary'} size={'large'}>
-                            <Box sx={{
-                                display: 'grid',
-                                gridTemplateColumns: '1fr',
-                                gridTemplateRows: '1fr',
-                                placeItems: 'center',
-                            }}>
-                                <Box sx={{
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    gridColumn: '1/-1',
-                                    gridRow: '1/-1',
-                                }}>
-                                    <Image priority={true} src={'/icons/png/circle.png'} width={52} height={52}/>
-                                </Box>
-                                <Box sx={{
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    gridColumn: '1/-1',
-                                    gridRow: '1/-1',
-                                }}>
-                                    <Image priority={true} src={'/icons/png/playbtn.png'} width={15} height={17}/>
-                                </Box>
-                            </Box>
-                            {/*<PlayCircleOutlineOutlinedIcon sx={{*/}
-                            {/*    width: '52px',*/}
-                            {/*    height: '52px',*/}
-                            {/*}}/>*/}
-                        </IconButton>
+                        {/*<IconButton color={'primary'} size={'large'}>*/}
+                        {/*    <Box sx={{*/}
+                        {/*        display: 'grid',*/}
+                        {/*        gridTemplateColumns: '1fr',*/}
+                        {/*        gridTemplateRows: '1fr',*/}
+                        {/*        placeItems: 'center',*/}
+                        {/*    }}>*/}
+                        {/*        <Box sx={{*/}
+                        {/*            display: 'flex',*/}
+                        {/*            justifyContent: 'center',*/}
+                        {/*            alignItems: 'center',*/}
+                        {/*            gridColumn: '1/-1',*/}
+                        {/*            gridRow: '1/-1',*/}
+                        {/*        }}>*/}
+                        {/*            <Image priority={true} src={'/icons/png/circle.png'} width={52} height={52}/>*/}
+                        {/*        </Box>*/}
+                        {/*        <Box sx={{*/}
+                        {/*            display: 'flex',*/}
+                        {/*            justifyContent: 'center',*/}
+                        {/*            alignItems: 'center',*/}
+                        {/*            gridColumn: '1/-1',*/}
+                        {/*            gridRow: '1/-1',*/}
+                        {/*        }}>*/}
+                        {/*            <Image priority={true} src={'/icons/png/playbtn.png'} width={15} height={17}/>*/}
+                        {/*        </Box>*/}
+                        {/*    </Box>*/}
+                        {/*    /!*<PlayCircleOutlineOutlinedIcon sx={{*!/*/}
+                        {/*    /!*    width: '52px',*!/*/}
+                        {/*    /!*    height: '52px',*!/*/}
+                        {/*    /!*}}/>*!/*/}
+                        {/*</IconButton>*/}
 
                     </Box>
 
@@ -191,7 +218,8 @@ const HeroSection = () => {
                     }}>
                         <Typography fontSize={'14px'} variant={'body1'}
                         >
-                            Try our essential package for free now, and see why we’re the newest necessity in real estate.
+                            Try our essential package for free now, and see why we’re the newest necessity in real
+                            estate.
                             <br/>
                             Sign up in minutes, no CC required.
                         </Typography>
@@ -204,12 +232,14 @@ const HeroSection = () => {
                             md: 'flex',
                         }
                     }} mt={'2rem'}>
-                    <Testimonial
-                      content="... I didn’t realize at the time how spread-out we were through multiple platforms, but RentBase put everything in one place. All of our leads, landlords, documents, and follow-ups are now in one place... "
-                      image=""
-                      name="Austin Heredia"
-                      position="Founder"
-                      company="Chicago Rentals / HomeSmart Connect"/>
+                        <Testimonial
+                            content="... I didn’t realize at the time how spread-out we were through multiple platforms, but RentBase put everything in one place. All of our leads, landlords, documents, and follow-ups are now in one place... "
+                            image=""
+                            name="Austin Heredia"
+                            position="Founder"
+                            company="Chicago Rentals / HomeSmart Connect"
+                            isSingleTestimonial
+                        />
                     </Box>
 
 
@@ -222,12 +252,42 @@ const HeroSection = () => {
                         md: 'flex',
                     }
                 }} display={'flex'} justifyContent={'center'} alignItems={'center'}>
-                    <Image src={'/home/heroMobiles.png'}
-                           layout={'intrinsic'}
-                           width={505.23}
-                           height={497.45}
-                           priority={true}
-                    />
+                    <Fade right>
+
+                    <Box sx={{
+                        animation: 'float 3s ease-in-out infinite',
+                        '@keyframes float': {
+                            '0%': {
+                                '& img': {
+
+                                boxShadow: '0 5px 15px 0px rgba(0,0,0,0.6)',
+                                },
+                                transform: 'translatey(0px)',
+                            },
+                            '50%': {
+                                '& img': {
+
+                                    boxShadow: '0 25px 15px 0px rgba(0,0,0,0.2)',
+                                },
+                                transform: 'translatey(-20px)',
+                            },
+                            '100%': {
+                                '& img': {
+                                boxShadow: '0 5px 15px 0px rgba(0,0,0,0.6)',
+                                },
+                                transform: 'translatey(0px)',
+                            },
+                        }
+                    }}>
+
+                        <Image src={'/home/heroMobiles.png'}
+                               layout={'intrinsic'}
+                               width={505.23}
+                               height={497.45}
+                               priority={true}
+                        />
+                    </Box>
+                    </Fade>
                 </Box>
 
                 {/*    Tablet Image Section*/}
@@ -239,7 +299,7 @@ const HeroSection = () => {
                     justifyContent: 'center',
                 }}>
                     <Image
-                        src={'/home/mocks/tablet/heroTablet.svg'} width={542}
+                        src={'/home/mocks/tablet/heroTablet.png'} width={542}
                         height={367}
                     />
                 </Box>
