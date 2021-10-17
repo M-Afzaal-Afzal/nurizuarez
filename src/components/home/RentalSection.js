@@ -55,6 +55,7 @@ const RentalSection = () => {
                 {
                     name: "Stay Organized",
                     imgUrl: "/home/mocks/desktop/stayOrganized.png",
+                    imgUrlMobile: "/home/mocks/mobile/stayOrganized.png",
                     heading: "Stay Organized",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
@@ -63,6 +64,7 @@ const RentalSection = () => {
                 {
                     name: "Optimize your Leads",
                     imgUrl: "/home/mocks/desktop/optimizeYourLead.png",
+                    imgUrlMobile: "/home/mocks/mobile/optimizeYourLead.png",
                     heading: "Optimize your Leads",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
@@ -71,6 +73,7 @@ const RentalSection = () => {
                 {
                     name: "Predictive Automation",
                     imgUrl: "/home/mocks/desktop/productiveAutomations.png",
+                    imgUrlMobile: "/home/mocks/mobile/productiveAutomations.png",
                     heading: "Predictive Automation",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
@@ -84,6 +87,7 @@ const RentalSection = () => {
                 {
                     name: "Increase Agents Productivity",
                     imgUrl: "/home/mocks/desktop/increaseAgentsProductivity.png",
+                    imgUrlMobile: "/home/mocks/mobile/increaseAgentsProductivity.png",
                     heading: "Increase Agents Productivity",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
@@ -92,6 +96,7 @@ const RentalSection = () => {
                 {
                     name: "Improve Transparency",
                     imgUrl: "/home/mocks/desktop/improveTransparancy.png",
+                    imgUrlMobile: "/home/mocks/mobile/improveTransparancy.png",
                     heading: "Improve Transparency",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
@@ -100,6 +105,7 @@ const RentalSection = () => {
                 {
                     name: "Agent Management and Training",
                     imgUrl: "/home/mocks/desktop/agentManagementAndTrain.png",
+                    imgUrlMobile: "/home/mocks/mobile/agentManagementAndTrain.png",
                     heading: "Agent Management and Training",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
@@ -361,7 +367,8 @@ const RentalSection = () => {
                             fontWeight: 'bold',
                         }} variant={'h1'}
                     >
-                        Database & CRM
+                        {/*todo - Here add the selection section name*/}
+                        {data[value].options[selectedSubOption].heading}
                     </Typography>
 
                     <Typography sx={{
@@ -388,7 +395,7 @@ const RentalSection = () => {
                         display: 'flex',
                         justifyContent: 'center',
                     }}>
-                        <Image src={'/home/mocks/tablet/heroTablet.svg'}  width={334} height={207.31}/>
+                        <Image src={data[value].options[selectedSubOption].imgUrlMobile} width={334} height={207.31}/>
                     </Box>
 
                 </Box>
@@ -563,7 +570,8 @@ const RentalSection = () => {
                             fontWeight: 'bold',
                         }} variant={'h1'}
                     >
-                        Database & CRM
+                        {/* Todo - add the haeding there*/}
+                        {data[value].options[selectedSubOption].heading}
                     </Typography>
 
                     <Typography sx={{
@@ -590,7 +598,7 @@ const RentalSection = () => {
                         display: 'flex',
                         justifyContent: 'center',
                     }}>
-                        <Image src={'/home/mocks/tablet/heroTablet.svg'}  width={334} height={207.31}/>
+                        <Image src={data[value].options[selectedSubOption].imgUrlMobile} width={334} height={207.31}/>
                     </Box>
 
                 </Box>
