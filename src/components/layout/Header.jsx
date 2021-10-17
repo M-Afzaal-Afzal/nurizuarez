@@ -231,12 +231,14 @@ const Header = () => {
                 <Stack
                     sx={{
                         display: {
-                            xs: 'flex',
+                            xs: 'grid',
                             md: 'none'
                         },
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         height: '100px',
+                        gridTemplateColumns: '31px 1fr 31px',
+                        placeItems: 'center',
                     }}
                     direction={'row'}
                 >

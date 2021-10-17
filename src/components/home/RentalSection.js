@@ -58,7 +58,7 @@ const RentalSection = () => {
                     imgUrl: "/home/mocks/desktop/stayOrganized.png",
                     imgUrlMobile: "/home/mocks/mobile/stayOrganized.png",
                     heading: "Stay Organized",
-                    subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
+                    // subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
                     description: "Keep all your data and follow-ups for landlords, listings, and leads organize in one place.",
                 },
@@ -67,7 +67,7 @@ const RentalSection = () => {
                     imgUrl: "/home/mocks/desktop/optimizeYourLead.png",
                     imgUrlMobile: "/home/mocks/mobile/optimizeYourLead.png",
                     heading: "Optimize your Leads",
-                    subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
+                    // subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
                     description: "RentBase's automated qualifying tool helps save agents 5-10 hrs a week and match your leads to your listing.",
                 },
@@ -76,7 +76,7 @@ const RentalSection = () => {
                     imgUrl: "/home/mocks/desktop/productiveAutomations.png",
                     imgUrlMobile: "/home/mocks/mobile/productiveAutomations.png",
                     heading: "Predictive Automation",
-                    subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
+                    // subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
                     description: "Data-driven insights power automated follow-ups and identify when a renter is likely to turn into a sale.",
                 },
@@ -90,7 +90,7 @@ const RentalSection = () => {
                     imgUrl: "/home/mocks/desktop/increaseAgentsProductivity.png",
                     imgUrlMobile: "/home/mocks/mobile/increaseAgentsProductivity.png",
                     heading: "Increase Agents Productivity",
-                    subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
+                    // subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
                     description: `Get the best out of your agents by providing them a next-generation rental operating system you can run your entire rental business out of. Agents can work faster and smarter with RentBase's data-insight driven features.`
                 },
@@ -99,7 +99,7 @@ const RentalSection = () => {
                     imgUrl: "/home/mocks/desktop/improveTransparancy.png",
                     imgUrlMobile: "/home/mocks/mobile/improveTransparancy.png",
                     heading: "Improve Transparency",
-                    subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
+                    // subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
                     description: `Now your entire team can work off of a centralized database they can access both in the office and on the go. RentBase notifies your whole team of live updates to your shared database and promotes teamwork amongst your agent.`
                 },
@@ -108,7 +108,7 @@ const RentalSection = () => {
                     imgUrl: "/home/mocks/desktop/agentManagementAndTrain.png",
                     imgUrlMobile: "/home/mocks/mobile/agentManagementAndTrain.png",
                     heading: "Agent Management and Training",
-                    subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
+                    // subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
                     description:`Track key stats on your agents production and identify where your team's strengths and weaknesses are. RentBase's best practices and training tools help shorten the learning curve with new agents.`
                 },
@@ -382,15 +382,15 @@ const RentalSection = () => {
                         {data[value].options[selectedSubOption].description}
                     </Typography>
 
-                    <Typography color={'primary'} sx={{
-                        mt: '12px',
-                        fontSize: '16px',
-                        textAlign: 'center',
-                        fontWeight: '600',
+                    {/*<Typography color={'primary'} sx={{*/}
+                    {/*    mt: '12px',*/}
+                    {/*    fontSize: '16px',*/}
+                    {/*    textAlign: 'center',*/}
+                    {/*    fontWeight: '600',*/}
 
-                    }} variant={'body1'}>
-                        Saves agents 10-15 hours a week
-                    </Typography>
+                    {/*}} variant={'body1'}>*/}
+                    {/*    Saves agents 10-15 hours a week*/}
+                    {/*</Typography>*/}
 
                     {/*    Image*/}
                     <Box sx={{
@@ -587,15 +587,15 @@ const RentalSection = () => {
                         {data[value].options[selectedSubOption].description}
                     </Typography>
 
-                    <Typography color={'primary'} sx={{
-                        mt: '12px',
-                        fontSize: '16px',
-                        textAlign: 'center',
-                        fontWeight: '600',
+                    {/*<Typography color={'primary'} sx={{*/}
+                    {/*    mt: '12px',*/}
+                    {/*    fontSize: '16px',*/}
+                    {/*    textAlign: 'center',*/}
+                    {/*    fontWeight: '600',*/}
 
-                    }} variant={'body1'}>
-                        Saves agents 10-15 hours a week
-                    </Typography>
+                    {/*}} variant={'body1'}>*/}
+                    {/*    Saves agents 10-15 hours a week*/}
+                    {/*</Typography>*/}
 
                     {/*    Image*/}
                     <Box sx={{
