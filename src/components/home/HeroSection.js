@@ -53,6 +53,7 @@ const HeroSection = () => {
                     xs: '1fr',
                     md: '1fr 1fr',
                 },
+                alignItems: 'flex-start',
                 '&:before': {
                     xs: {
                         content: "''",

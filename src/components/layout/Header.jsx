@@ -388,35 +388,39 @@ const Header = () => {
                                 //  gridTemplateColumns={'1fr 1fr 1fr 1fr 1fr'}
                                 //  justifyContent={'left'}
                             >
+                                {/*<IconButton>*/}
+                                {/*    <FacebookIcon fontSize={'40px'} sx={{*/}
+                                {/*        color: theme => theme.palette.primary.main,*/}
+                                {/*    }}/>*/}
+                                {/*</IconButton>*/}
+
+                                {/*<IconButton>*/}
+                                {/*    <FaTiktok size={'20.99'} style={{*/}
+                                {/*        color: 'rgba(98, 0, 214, 1)',*/}
+                                {/*    }}/>*/}
+                                {/*</IconButton>*/}
+
                                 <IconButton>
-                                    <FacebookIcon fontSize={'40px'} sx={{
-                                        color: theme => theme.palette.primary.main,
-                                    }}/>
+
+                                    <a target={'_blank'} href="https://www.instagram.com/therentbase/">
+                                        <InstagramIcon fontSize={'40px'} sx={{
+                                            color: '#fff'
+                                        }}/>
+                                    </a>
                                 </IconButton>
 
-                                <IconButton>
-                                    <FaTiktok size={'20.99'} style={{
-                                        color: 'rgba(98, 0, 214, 1)',
-                                    }}/>
-                                </IconButton>
+                                {/*<IconButton>*/}
+                                {/*    <TwitterIcon fontSize={'40px'} sx={{*/}
+                                {/*        color: theme => theme.palette.primary.main,*/}
+                                {/*    }}/>*/}
+                                {/*</IconButton>*/}
 
                                 <IconButton>
-
-                                    <InstagramIcon fontSize={'40px'} sx={{
-                                        color: theme => theme.palette.primary.main,
-                                    }}/>
-                                </IconButton>
-
-                                <IconButton>
-                                    <TwitterIcon fontSize={'40px'} sx={{
-                                        color: theme => theme.palette.primary.main,
-                                    }}/>
-                                </IconButton>
-
-                                <IconButton>
-                                    <LinkedInIcon fontSize={'40px'} sx={{
-                                        color: theme => theme.palette.primary.main,
-                                    }}/>
+                                    <a target={'_blank'} href="https://www.linkedin.com/company/therentbase">
+                                        <LinkedInIcon fontSize={'40px'} sx={{
+                                            color: '#fff',
+                                        }}/>
+                                    </a>
                                 </IconButton>
 
                             </Box>

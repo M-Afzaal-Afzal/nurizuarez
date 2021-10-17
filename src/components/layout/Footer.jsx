@@ -34,7 +34,7 @@ const Footer = () => {
                         md: 'auto 1fr auto',
                     }}
                     sx={{
-                        gridColumnGap:'2rem',
+                        gridColumnGap: '2rem',
                         gridRowGap: '1rem',
                         placeItems: {
                             xs: 'center',
@@ -50,40 +50,43 @@ const Footer = () => {
                             md: 'unset',
                         },
 
-                    }}  display={'grid'}
+                    }} display={'grid'}
                          gridTemplateColumns={'1fr 1fr 1fr 1fr 1fr'}
                          justifyContent={'center'}
                     >
-                        <IconButton>
-                            <FacebookIcon fontSize={'40px'} sx={{
-                                color: '#fff',
-                            }}/>
-                        </IconButton>
+                        {/*<IconButton>*/}
+                        {/*    <FacebookIcon fontSize={'40px'} sx={{*/}
+                        {/*        color: '#fff',*/}
+                        {/*    }}/>*/}
+                        {/*</IconButton>*/}
 
                         <IconButton>
-
-                            <InstagramIcon fontSize={'40px'} sx={{
-                                color: '#fff'
-                            }}/>
+                            <a target={'_blank'} href="https://www.instagram.com/therentbase/">
+                                <InstagramIcon fontSize={'40px'} sx={{
+                                    color: '#fff'
+                                }}/>
+                            </a>
                         </IconButton>
 
-                        <IconButton>
-                            <TwitterIcon fontSize={'40px'} sx={{
-                                color: '#fff',
-                            }}/>
-                        </IconButton>
-
-                        <IconButton>
-                            <LinkedInIcon fontSize={'40px'} sx={{
-                                color: '#fff',
-                            }}/>
-                        </IconButton>
+                        {/*<IconButton>*/}
+                        {/*    <TwitterIcon fontSize={'40px'} sx={{*/}
+                        {/*        color: '#fff',*/}
+                        {/*    }}/>*/}
+                        {/*</IconButton>*/}
 
                         <IconButton>
-                            <FaTiktok size={'20.99'} style={{
-                                color: '#fff',
-                            }}/>
+                            <a target={'_blank'} href="https://www.linkedin.com/company/therentbase">
+                                <LinkedInIcon fontSize={'40px'} sx={{
+                                    color: '#fff',
+                                }}/>
+                            </a>
                         </IconButton>
+
+                        {/*<IconButton>*/}
+                        {/*    <FaTiktok size={'20.99'} style={{*/}
+                        {/*        color: '#fff',*/}
+                        {/*    }}/>*/}
+                        {/*</IconButton>*/}
 
                     </Box>
 
@@ -121,7 +124,7 @@ const Footer = () => {
                                 background: '#fff',
                                 my: 'auto',
                                 display: {
-                                    xs:'none',
+                                    xs: 'none',
                                     md: 'block',
                                 }
                             }} flexItem light variant="middle"/>
@@ -129,13 +132,13 @@ const Footer = () => {
                         <ButtonPrimaryText sx={{
                             fontSize: '15px',
                             color: '#fff',
-                        }} >
+                        }}>
                             Terms
                         </ButtonPrimaryText>
                         <ButtonPrimaryText sx={{
                             fontSize: '15px',
                             color: '#fff',
-                        }} >
+                        }}>
                             Privacy
                         </ButtonPrimaryText>
                     </Box>
@@ -151,7 +154,7 @@ const Footer = () => {
                 lef: 0,
                 width: '100%',
                 zIndex: 300,
-                background: '#eee',
+                background: 'rgba(255,255,255,0.9)',
                 display: {
                     xs: 'flex',
                     md: 'none'
