@@ -15,6 +15,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import {FaTiktok} from "react-icons/fa";
 import {useRouter} from "next/router";
+import {ctaClickHandler} from "../../utils/utils";
 
 const Header = () => {
 
@@ -45,6 +46,11 @@ const Header = () => {
             setItemToNavigate(name.toUpperCase())
         }
 
+    }
+
+    const startForFreeClickHandler = () => {
+        ctaClickHandler();
+        mobileNavToggler(false);
     }
 
     useEffect(() => {
@@ -208,7 +214,7 @@ const Header = () => {
                         </Box>
 
                         <Box>
-                            <Button sx={{
+                            <Button onClick={startForFreeClickHandler} sx={{
                                 height: '50px',
                                 textTransform: 'unset',
                             }} color={'primary'} variant={'outlined'}>
@@ -369,7 +375,7 @@ const Header = () => {
                             py: '2rem',
                             px: '2rem',
                         }}>
-                            <Button fullWidth color={'primary'} variant={'contained'}>
+                            <Button onClick={startForFreeClickHandler} fullWidth color={'primary'} variant={'contained'}>
                                 Start For Free
                             </Button>
                         </Box>
@@ -400,14 +406,14 @@ const Header = () => {
                                 {/*    }}/>*/}
                                 {/*</IconButton>*/}
 
+                                    <a target={'_blank'} href="https://www.instagram.com/therentbase/">
                                 <IconButton>
 
-                                    <a target={'_blank'} href="https://www.instagram.com/therentbase/">
                                         <InstagramIcon fontSize={'40px'} sx={{
-                                            color: '#fff'
+                                            color: 'rgba(98, 0, 214, 1)'
                                         }}/>
-                                    </a>
                                 </IconButton>
+                                    </a>
 
                                 {/*<IconButton>*/}
                                 {/*    <TwitterIcon fontSize={'40px'} sx={{*/}
@@ -415,13 +421,13 @@ const Header = () => {
                                 {/*    }}/>*/}
                                 {/*</IconButton>*/}
 
-                                <IconButton>
                                     <a target={'_blank'} href="https://www.linkedin.com/company/therentbase">
+                                <IconButton>
                                         <LinkedInIcon fontSize={'40px'} sx={{
-                                            color: '#fff',
+                                           color: 'rgba(98, 0, 214, 1)',
                                         }}/>
-                                    </a>
                                 </IconButton>
+                                    </a>
 
                             </Box>
                         </Box>

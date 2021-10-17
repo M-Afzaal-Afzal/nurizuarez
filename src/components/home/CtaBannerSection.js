@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Typography} from "@mui/material";
 import ButtonGreyContained from "../common/buttons/ButtonGreyContained";
+import {ctaClickHandler} from "../../utils/utils";
 
 const CtaBannerSection = () => {
     return (
@@ -47,7 +48,7 @@ const CtaBannerSection = () => {
                         md: 'flex'
                     }
                 }} justifyContent={'flex-end'}>
-                    <ButtonGreyContained>
+                    <ButtonGreyContained onClick={ctaClickHandler}>
                         Start for Free
                     </ButtonGreyContained>
                 </Box>

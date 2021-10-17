@@ -6,6 +6,7 @@ import ButtonPrimaryText from "../common/buttons/ButtonPrimaryText";
 import Image from 'next/image';
 import PrimaryButtonContained from "../common/buttons/PrimaryButtonContained";
 import {useGlobalContext} from "../../../context/GlobalContext";
+import {ctaClickHandler} from "../../utils/utils";
 
 const TabPanel = (props) => {
     const {children, value, index, ...other} = props;
@@ -328,7 +329,9 @@ const RentalSection = () => {
                             </Typography>
 
                             <Box py={'1.5rem'}>
-                                <PrimaryButtonContained sx={{
+                                <PrimaryButtonContained
+                                    onClick={ctaClickHandler}
+                                    sx={{
                                     width: "187px",
                                     height: "50px",
 
@@ -531,7 +534,9 @@ const RentalSection = () => {
                             </Typography>
 
                             <Box py={'1.5rem'}>
-                                <PrimaryButtonContained sx={{
+                                <PrimaryButtonContained
+                                    onClick={ctaClickHandler}
+                                    sx={{
                                     width: "187px",
                                     height: "50px",
 

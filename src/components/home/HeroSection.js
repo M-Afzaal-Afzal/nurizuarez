@@ -9,6 +9,7 @@ import Testimonial from "../common/Testimonial";
 import {useInView} from 'react-intersection-observer';
 import {useGlobalContext} from "../../../context/GlobalContext";
 import Fade from 'react-reveal/Fade';
+import {ctaClickHandler} from "../../utils/utils";
 
 const HeroSection = () => {
 
@@ -171,7 +172,7 @@ const HeroSection = () => {
                         },
                     }} display={'flex'} alignItems={'center'} py={'2rem'}>
 
-                        <PrimaryButtonContained>
+                        <PrimaryButtonContained onClick={ctaClickHandler}>
                             Start for Free
                         </PrimaryButtonContained>
 

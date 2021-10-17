@@ -6,6 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import ButtonPrimaryText from "../common/buttons/ButtonPrimaryText";
 import {FaTiktok} from "react-icons/fa";
+import {ctaClickHandler} from "../../utils/utils";
 
 const Footer = () => {
     return (
@@ -51,7 +52,8 @@ const Footer = () => {
                         },
 
                     }} display={'grid'}
-                         gridTemplateColumns={'1fr 1fr 1fr 1fr 1fr'}
+                         // gridTemplateColumns={'1fr 1fr 1fr 1fr 1fr'}
+                         gridTemplateColumns={'1fr 1fr '}
                          justifyContent={'center'}
                     >
                         {/*<IconButton>*/}
@@ -165,7 +167,9 @@ const Footer = () => {
                 border: '1px solid #000000',
                 flexDirection: 'column',
             }}>
-                <Button sx={{
+                <Button
+                    onClick={ctaClickHandler}
+                    sx={{
                     textTransform: 'unset',
                 }} fullWidth variant={'contained'} color={'primary'}>
                     Start For Free

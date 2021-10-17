@@ -60,6 +60,7 @@ const TryRentBaseSection = () => {
 
     return (
         <Box
+            id={'form'}
             sx={{
                 maxWidth: '991px',
                 px: {
