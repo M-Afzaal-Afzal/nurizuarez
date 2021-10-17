@@ -14,7 +14,7 @@ const CtaBannerSection = () => {
                 display: 'grid',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                mx: {xs: '2rem',md: 'auto'},
+                mx: {xs: '8px',md: 'auto'},
                 px: '2rem',
                 gridTemplateColumns: '1fr auto',
             }}>
