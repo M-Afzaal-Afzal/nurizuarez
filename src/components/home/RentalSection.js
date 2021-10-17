@@ -59,7 +59,7 @@ const RentalSection = () => {
                     heading: "Stay Organized",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
-                    description: "Save countless hours by streamlining your lead intake with our qualifying tools, and automatically match your leads to the listings their most likely to rent.",
+                    description: "Keep all your data and follow-ups for landlords, listings, and leads organize in one place.",
                 },
                 {
                     name: "Optimize your Leads",
@@ -68,7 +68,7 @@ const RentalSection = () => {
                     heading: "Optimize your Leads",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
-                    description: "Save countless hours by streamlining your lead intake with our qualifying tools, and automatically match your leads to the listings their most likely to rent.",
+                    description: "RentBase's automated qualifying tool helps save agents 5-10 hrs a week and match your leads to your listing.",
                 },
                 {
                     name: "Predictive Automation",
@@ -77,7 +77,7 @@ const RentalSection = () => {
                     heading: "Predictive Automation",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
-                    description: "Save countless hours by streamlining your lead intake with our qualifying tools, and automatically match your leads to the listings their most likely to rent.",
+                    description: "Data-driven insights power automated follow-ups and identify when a renter is likely to turn into a sale.",
                 },
             ]
         },
@@ -91,7 +91,7 @@ const RentalSection = () => {
                     heading: "Increase Agents Productivity",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
-                    description: "Save countless hours by streamlining your lead intake with our qualifying tools, and automatically match your leads to the listings their most likely to rent.",
+                    description: `Get the best out of your agents by providing them a next-generation rental operating system you can run your entire rental business out of. Agents can work faster and smarter with RentBase's data-insight driven features.`
                 },
                 {
                     name: "Improve Transparency",
@@ -100,7 +100,7 @@ const RentalSection = () => {
                     heading: "Improve Transparency",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
-                    description: "Save countless hours by streamlining your lead intake with our qualifying tools, and automatically match your leads to the listings their most likely to rent.",
+                    description: `Now your entire team can work off of a centralized database they can access both in the office and on the go. RentBase notifies your whole team of live updates to your shared database and promotes teamwork amongst your agent.`
                 },
                 {
                     name: "Agent Management and Training",
@@ -109,7 +109,7 @@ const RentalSection = () => {
                     heading: "Agent Management and Training",
                     subHeading: <>saves agents 10-15 hours <br/>a week on average</>,
                     url: "",
-                    description: "Save countless hours by streamlining your lead intake with our qualifying tools, and automatically match your leads to the listings their most likely to rent.",
+                    description:`Track key stats on your agents production and identify where your team's strengths and weaknesses are. RentBase's best practices and training tools help shorten the learning curve with new agents.`
                 },
             ]
         },
@@ -376,7 +376,7 @@ const RentalSection = () => {
                         fontSize: '16px',
                         textAlign: 'center',
                     }} variant={'body1'}>
-                        Save countless hours by streamlining your lead intake <br/> with our qualifying tools.
+                        {data[value].options[selectedSubOption].description}
                     </Typography>
 
                     <Typography color={'primary'} sx={{
@@ -579,7 +579,7 @@ const RentalSection = () => {
                         fontSize: '16px',
                         textAlign: 'center',
                     }} variant={'body1'}>
-                        Save countless hours by streamlining your lead intake <br/> with our qualifying tools.
+                        {data[value].options[selectedSubOption].description}
                     </Typography>
 
                     <Typography color={'primary'} sx={{
