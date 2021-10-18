@@ -36,7 +36,7 @@ const HeroSection = () => {
                 md: '24px',
             },
             pb: {
-                xs: '6rem',
+                xs: '3rem',
                 md: 0,
             },
             color: {
@@ -116,7 +116,7 @@ const HeroSection = () => {
                             fontSize: {
                                 xs: '41px',
                                 md: '51px',
-                                lg: '56px',
+                                lg: '75px',
                                 'xxl': '66px'
                             }
                         }}
@@ -210,20 +210,20 @@ const HeroSection = () => {
 
                     </Box>
 
-                    <Box sx={{
-                        display: {
-                            xs: 'none',
-                            md: 'flex',
-                        }
-                    }}>
-                        <Typography fontSize={'14px'} variant={'body1'}
-                        >
-                            Try our essential package for free now, and see why we’re the newest necessity in real
-                            estate.
-                            <br/>
-                            Sign up in minutes, no CC required.
-                        </Typography>
-                    </Box>
+                    {/*<Box sx={{*/}
+                    {/*    display: {*/}
+                    {/*        xs: 'none',*/}
+                    {/*        md: 'flex',*/}
+                    {/*    }*/}
+                    {/*}}>*/}
+                        {/*<Typography fontSize={'14px'} variant={'body1'}*/}
+                        {/*>*/}
+                            {/*Try our essential package for free now, and see why we’re the newest necessity in real*/}
+                            {/*estate.*/}
+                            {/*<br/>*/}
+                            {/*Sign up in minutes, no CC required.*/}
+                        {/*</Typography>*/}
+                    {/*</Box>*/}
 
                     {/* user profile card*/}
                     <Box sx={{
@@ -233,6 +233,7 @@ const HeroSection = () => {
                         }
                     }} mt={'2rem'}>
                         <Testimonial
+                            width={'550px'}
                             content="... I didn’t realize at the time how spread-out we were through multiple platforms, but RentBase put everything in one place. All of our leads, landlords, documents, and follow-ups are now in one place... "
                             image=""
                             name="Austin Heredia"

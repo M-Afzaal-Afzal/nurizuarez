@@ -22,7 +22,7 @@ const TryRentBaseSection = () => {
         setSelectedRole(index);
     }
 
-    const roles = ['Agent', 'Manager', 'real-estate professional', 'Other']
+    const roles = ['Agent', 'Manager', 'Real-estate professional', 'Other']
 
     // Example POST method implementation:
     async function postData(url = '', data = {}) {
