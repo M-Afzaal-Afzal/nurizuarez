@@ -26,7 +26,7 @@ export default function MyApp(props) {
 
             <CacheProvider value={emotionCache}>
                 <Head>
-                    <title>RentBase</title>
+                    <title>Rental cycles automation, leads CRM, free listings database | RentBase</title>
                     <meta name="viewport" content="initial-scale=1, width=device-width"/>
                     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
                     <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
