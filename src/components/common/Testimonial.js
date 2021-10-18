@@ -20,7 +20,7 @@ const Testimonial = (props) => {
 
             <Box sx={{
                 height: '100%',
-                width: {
+                width: props.width ? props.width : {
                     xs: "328px",
                     md: "340",
                     lg: '390px',

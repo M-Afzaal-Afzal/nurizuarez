@@ -123,7 +123,7 @@ const Header = () => {
         <Box id={'header'} sx={{
             position: isNavbarFixed ? 'fixed' : 'relative',
             background: isNavbarFixed ? 'rgba(255, 255, 255, 0.65)' : 'relative',
-            backdropFilter: 'blur(64px)',
+            backdropFilter: isNavbarFixed ? 'blur(64px)' : "unset",
             width: '100%',
             zIndex: 55,
         }}>

@@ -36,7 +36,7 @@ const HeroSection = () => {
                 md: '24px',
             },
             pb: {
-                xs: '6rem',
+                xs: '3rem',
                 md: 0,
             },
             color: {
@@ -116,7 +116,7 @@ const HeroSection = () => {
                             fontSize: {
                                 xs: '41px',
                                 md: '51px',
-                                lg: '56px',
+                                lg: '75px',
                                 'xxl': '66px'
                             }
                         }}
@@ -233,6 +233,7 @@ const HeroSection = () => {
                         }
                     }} mt={'2rem'}>
                         <Testimonial
+                            width={'550px'}
                             content="... I didn’t realize at the time how spread-out we were through multiple platforms, but RentBase put everything in one place. All of our leads, landlords, documents, and follow-ups are now in one place... "
                             image=""
                             name="Austin Heredia"
