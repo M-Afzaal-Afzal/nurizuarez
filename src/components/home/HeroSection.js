@@ -210,20 +210,20 @@ const HeroSection = () => {
 
                     </Box>
 
-                    <Box sx={{
-                        display: {
-                            xs: 'none',
-                            md: 'flex',
-                        }
-                    }}>
-                        <Typography fontSize={'14px'} variant={'body1'}
-                        >
-                            Try our essential package for free now, and see why we’re the newest necessity in real
-                            estate.
-                            <br/>
-                            Sign up in minutes, no CC required.
-                        </Typography>
-                    </Box>
+                    {/*<Box sx={{*/}
+                    {/*    display: {*/}
+                    {/*        xs: 'none',*/}
+                    {/*        md: 'flex',*/}
+                    {/*    }*/}
+                    {/*}}>*/}
+                        {/*<Typography fontSize={'14px'} variant={'body1'}*/}
+                        {/*>*/}
+                            {/*Try our essential package for free now, and see why we’re the newest necessity in real*/}
+                            {/*estate.*/}
+                            {/*<br/>*/}
+                            {/*Sign up in minutes, no CC required.*/}
+                        {/*</Typography>*/}
+                    {/*</Box>*/}
 
                     {/* user profile card*/}
                     <Box sx={{
