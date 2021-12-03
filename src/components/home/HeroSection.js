@@ -210,20 +210,17 @@ const HeroSection = () => {
 
                     </Box>
 
-                    {/*<Box sx={{*/}
-                    {/*    display: {*/}
-                    {/*        xs: 'none',*/}
-                    {/*        md: 'flex',*/}
-                    {/*    }*/}
-                    {/*}}>*/}
-                        {/*<Typography fontSize={'14px'} variant={'body1'}*/}
-                        {/*>*/}
-                            {/*Try our essential package for free now, and see why we’re the newest necessity in real*/}
-                            {/*estate.*/}
-                            {/*<br/>*/}
-                            {/*Sign up in minutes, no CC required.*/}
-                        {/*</Typography>*/}
-                    {/*</Box>*/}
+                    <Box sx={{
+                        display: {
+                            xs: 'none',
+                            md: 'flex',
+                        }
+                    }}>
+                        <Typography fontSize={'14px'} variant={'body1'}
+                        >
+                            Get all the benefits of our essential package, now.
+                        </Typography>
+                    </Box>
 
                     {/* user profile card*/}
                     <Box sx={{
@@ -234,8 +231,8 @@ const HeroSection = () => {
                     }} mt={'2rem'}>
                         <Testimonial
                             width={'550px'}
-                            content="... I didn’t realize at the time how spread-out we were through multiple platforms, but RentBase put everything in one place. All of our leads, landlords, documents, and follow-ups are now in one place... "
-                            image=""
+                            content="...RentBase really helped us scale and add organization to our business practices as we added new teammates."
+                            image="/home/calder_billings_rentbase_rental_crm_agent.png"
                             name="Austin Heredia"
                             position="Founder"
                             company="Chicago Rentals / HomeSmart Connect"
@@ -282,6 +279,7 @@ const HeroSection = () => {
                     }}>
 
                         <Image src={'/home/heroMobiles.png'}
+                               quality={100}
                                layout={'intrinsic'}
                                width={505.23}
                                height={497.45}
@@ -300,6 +298,7 @@ const HeroSection = () => {
                     justifyContent: 'center',
                 }}>
                     <Image
+                        quality={100}
                         src={'/home/mocks/tablet/heroTablet.png'} width={542}
                         height={367}
                     />

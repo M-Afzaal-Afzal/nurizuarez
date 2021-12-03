@@ -220,7 +220,9 @@ const RentalSection = () => {
                                 display: {
                                     xs: 'none',
                                     md: 'block',
-                                }
+                                },
+                                fontWeight: (index === selectedSubOption) ? 600 : 400,
+
                             }} active={index === selectedSubOption} onClick={() => {
                                 selectSubOption(index);
                             }}
@@ -241,6 +243,8 @@ const RentalSection = () => {
                                 },
                                 height: '100%',
                                 color: (index === selectedSubOption) ? "#fff" : 'rgba(132, 132, 132, 1)',
+                                fontWeight: (index === selectedSubOption) ? 600 : 400,
+                                transition: 'all .3s linear',
                                 background: (index === selectedSubOption) ? "rgba(98, 0, 214, 1)" : 'transparent',
                                 border: (index === selectedSubOption) ? '1px solid rgba(98, 0, 214, 1)' : '1px solid rgba(132, 132, 132, 1)',
                                 margin: {

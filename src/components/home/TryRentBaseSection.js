@@ -260,7 +260,7 @@ const TryRentBaseSection = () => {
                     </Box>
 
                     <Box mt={'2rem'}>
-                        <PrimaryButtonContained type={'submit'} sx={{width: "193.04px"}}>
+                        <PrimaryButtonContained type={'submit'} sx={{width: {xs: '100%',sm:"193.04px"}}}>
                             Submit
                         </PrimaryButtonContained>
                     </Box>

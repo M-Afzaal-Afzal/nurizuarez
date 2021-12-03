@@ -50,7 +50,7 @@ const Testimonial = (props) => {
                             borderRadius: '10px',
                         }
                     }}>
-                        <img src={props.image || '/home/profile.png'} width={50} height={50}/>
+                        <img src={props.image || '/home/profile.png'} width={50} />
                     </Box>
 
                     <Box>

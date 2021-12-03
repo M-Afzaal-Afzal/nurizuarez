@@ -19,22 +19,22 @@ const AccordionCustom = ({heading, description}) => {
             },
             '.css-yw020d-MuiAccordionSummary-expandIconWrapper': {
                 paddingLeft: {
-                    xs: '1.5rem',
-                    md:'3rem',
+                    xs: '.5rem',
+                    md:'1rem',
                 },
                 paddingRight: {
-                    xs: '1.5rem',
-                    md:'3rem',
+                    xs: '.5rem',
+                    md:'1rem',
                 },
             },
             '.css-yw020d-MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-                paddingLeft: {
-                    xs: '1.5rem',
-                    md:'3rem',
-                },
+                // paddingLeft: {
+                //     xs: '1.5rem',
+                //     md:'3rem',
+                // },
                 paddingRight: {
-                    xs: '1.5rem',
-                    md:'3rem',
+                    xs: '.5rem',
+                    md:'1rem',
                 },
             }
 
@@ -56,8 +56,8 @@ const AccordionCustom = ({heading, description}) => {
 
                     <Typography sx={{
                         px: {
-                            xs: '1.5rem',
-                            md:'3rem',
+                            xs: '.5rem',
+                            md:'1rem',
                         },
                     }} variant={'body1'} fontWeight={'400'}>
                         {heading}
@@ -76,8 +76,8 @@ const AccordionCustom = ({heading, description}) => {
                         md:'3rem',
                     },
                     px: {
-                        xs: '1.5rem',
-                        md:'3rem',
+                        xs: '.5rem',
+                        md:'1rem',
                     },
                 }} >
                     {
